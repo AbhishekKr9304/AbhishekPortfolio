@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getAdjacentProject, projects } from "@/data/projects";
+import { ProjectPageHeader } from "@/components/project/ProjectPageHeader";
 import { ProjectHero } from "@/components/project/ProjectHero";
 import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { NextProjectNav } from "@/components/project/NextProjectNav";
 import { CaseStudySection, CaseStudyList } from "@/components/project/CaseStudySection";
 import { ProjectFlow } from "@/components/ui/ProjectFlow";
+import { Footer } from "@/components/layout/Footer";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -38,6 +40,7 @@ export default async function ProjectPage({
 
   return (
     <article>
+      <ProjectPageHeader />
       <ProjectHero project={project} />
 
       <CaseStudySection title="Project Overview">
@@ -85,6 +88,7 @@ export default async function ProjectPage({
       </CaseStudySection>
 
       <NextProjectNav project={nextProject} />
+      <Footer />
     </article>
   );
 }

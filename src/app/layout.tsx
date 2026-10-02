@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SoundProvider } from "@/lib/sound/SoundProvider";
-import { SiteNav } from "@/components/layout/SiteNav";
 import { SkipToContent } from "@/components/layout/SkipToContent";
-import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,11 +39,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SoundProvider>
           <SkipToContent />
-          <SiteNav />
           <main id="main-content" className="flex-1">
             {children}
           </main>
-          <Footer />
         </SoundProvider>
       </body>
     </html>

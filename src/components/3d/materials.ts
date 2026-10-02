@@ -1,0 +1,25 @@
+export const sceneColors = {
+  background: "#0a0b0d",
+  surface: "#15171b",
+  surfaceElevated: "#1c1f24",
+  border: "#2a2e35",
+  muted: "#4b5059",
+  metal: "#2e3238",
+  metalDark: "#1a1c20",
+  metalLight: "#3c4149",
+  bezel: "#111316",
+  rubber: "#0d0e10",
+  keycap: "#232730",
+  fabric: "#26292f",
+  accent: "#7dd3fc",
+  accentStrong: "#38bdf8",
+  magenta: "#e879f9",
+  magentaStrong: "#c026d3",
+  screenGlow: "#8fe3ff",
+  screenGlowDim: "#2a6a7a",
+  // Dark base color for LED-style accents: emission should carry the glow,
+  // not the diffuse albedo, so the surface reads as a lit element on dark
+  // plastic rather than a solid block of bright paint.
+  ledBase: "#0b1013",
+  ledBaseMagenta: "#140a16",
+};
