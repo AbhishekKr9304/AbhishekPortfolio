@@ -1,4 +1,5 @@
-export type ProjectCategory = "VR" | "AR" | "MR";
+export type ProjectCategory = "VR" | "AR" | "MR" | "Mechanical";
+export type ProjectDiscipline = "XR" | "Product Design";
 export type ProjectStatus = "seeded" | "placeholder";
 
 export interface ProjectFlowStep {
@@ -23,6 +24,7 @@ export interface ProjectVideo {
 export interface Project {
   slug: string;
   title: string;
+  discipline: ProjectDiscipline;
   category: ProjectCategory;
   client: string | null;
   year: string | null;

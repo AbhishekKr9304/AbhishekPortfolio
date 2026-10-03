@@ -8,10 +8,25 @@ export interface AchievementEntry {
 
 export const achievementEntries: AchievementEntry[] = [
   {
-    id: "xrcc-finalist",
-    title: "XRCC Finalist",
+    id: "xrcc-hackathon",
+    title: "XRCC Hackathon",
     project: "SmartLab XR — Industry 4.0 Experience",
-    description: "[CONTENT NEEDED]",
-    date: null,
+    description:
+      "Created SmartLab XR, a project demonstrating lab facilities immersively through an MR-based application.",
+    date: "May 2026",
+  },
+  {
+    id: "xrdc-design-challenge",
+    title: "XRDC Design Challenge",
+    project: "AI + XR Integration",
+    description: "Gained hands-on experience integrating the latest AI capabilities with XR.",
+    date: "January 2025",
+  },
+  {
+    id: "iimt-infinity-fest",
+    title: "IIMT Infinity Fest",
+    project: "AutoCAD Drafting Competition",
+    description: "Cash prize and certificate winner in AutoCAD drafting.",
+    date: "December 2022",
   },
 ];

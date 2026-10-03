@@ -2,11 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/data/nav";
 import { projects } from "@/data/projects";
 import { SoundToggle } from "@/components/ui/SoundToggle";
 
 export function SiteNav() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  // Section ids (e.g. "#workshops") only exist on the homepage. From any
+  // other route, a bare hash link does nothing — resolve it back to the
+  // homepage first so the jump actually lands somewhere.
+  const sectionHref = (href: string) => (isHome ? href : `/${href}`);
   const [activeId, setActiveId] = useState(navItems[0]?.id ?? "");
   const [indexOpen, setIndexOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -53,7 +60,7 @@ export function SiteNav() {
         {navItems.map((item) => (
           <a
             key={item.id}
-            href={item.href}
+            href={sectionHref(item.href)}
             aria-current={activeId === item.id ? "true" : undefined}
             className="group flex items-center gap-3"
           >
@@ -101,7 +108,7 @@ export function SiteNav() {
           {navItems.map((item) => (
             <li key={item.id}>
               <a
-                href={item.href}
+                href={sectionHref(item.href)}
                 onClick={() => setIndexOpen(false)}
                 className="block rounded-lg px-3 py-2 text-sm hover:bg-surface-elevated hover:text-accent"
               >
