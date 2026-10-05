@@ -15,6 +15,16 @@ export const achievementEntries: AchievementEntry[] = [
       "Created SmartLab XR, a project demonstrating lab facilities immersively through an MR-based application.",
     date: "May 2026",
   },
+
+    {
+    id: "djx hackathon",
+    title: "DJX Hackathon 2",
+    project: "Sushruta - MR based Surgical Experience",
+    description:
+      "Created Sushruta, a project demonstrating surgical procedures immersively through an MR-based application.",
+    date: "February 2026",
+  },
+
   {
     id: "xrdc-design-challenge",
     title: "XRDC Design Challenge",
