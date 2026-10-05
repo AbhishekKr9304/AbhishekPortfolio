@@ -23,7 +23,8 @@ export const projects: Project[] = [
     "XR Interaction",
     "VR Interaction",
     "Web Application",
-    "REST API"
+    "REST API",
+    "Figma"
   ],
 
   shortDescription:
@@ -180,7 +181,32 @@ export const projects: Project[] = [
   title: "Lumax Dharuhera VR Training"
 },
 
-  gallery: [],
+  gallery: [
+    {
+      type: "image",
+      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Env1.png",
+      alt: "Virtual factory floor with a marked assembly area, tool station, material storage racks and quality inspection desk",
+      caption: "Assembly area environment"
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Env2.png",
+      alt: "Top-down cutaway view of the full virtual factory building showing the training zones and assembly area layout",
+      caption: "Factory layout overview"
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Unity1.png",
+      alt: "Unity scene view of the training start point facing the assembly workstation, with an info kiosk and a glowing teleport marker",
+      caption: "Training start point in Unity"
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Unity2.png",
+      alt: "Unity scene view of the assembly workstation inside a hazard-striped zone, with part tables and a Start Training floor marker",
+      caption: "Assembly workstation in Unity"
+    }
+  ],
 
   status: "seeded"
 },
@@ -203,6 +229,7 @@ export const projects: Project[] = [
     "Meta All in One SDK",
     "Blender",
     "LiDAR",
+    "Figma"
   ],
 
   shortDescription:
@@ -428,7 +455,7 @@ export const projects: Project[] = [
     technologies: [
       "Unity",
       "Meta Quest",
-      "VR Interaction",
+      "XR Interaction Toolkit",
       "Blender",
     ],
     shortDescription:
@@ -530,7 +557,7 @@ export const projects: Project[] = [
     category: "VR",
     client: null,
     year: null,
-    technologies: ["Unity", "XR Interaction Toolkit", "Meta Quest"],
+    technologies: ["Unity", "XR Interaction Toolkit", "Meta Quest", "Blender", "Figma"],
     shortDescription:
       "An immersive VR training application for learning and experiencing a robotic welding cell through hardware familiarization, guided startup procedures, and welding simulation.",
     detailedDescription:
@@ -612,7 +639,7 @@ export const projects: Project[] = [
     category: "VR",
     client: null,
     year: null,
-    technologies: ["Unity", "Meta XR SDK", "Quest 3"],
+    technologies: ["Unity", "Meta All in One SDK", "Quest 3", "Blender", "Figma"],
     shortDescription:
       "An interactive VR pneumatic training system for building, connecting, and operating pneumatic circuits with virtual components and pressure visualization.",
     detailedDescription:
@@ -712,7 +739,7 @@ export const projects: Project[] = [
     category: "AR",
     client: null,
     year: null,
-    technologies: ["Unity", "Vuforia Engine", "Model Target", "Image Target"],
+    technologies: ["Unity", "Vuforia Engine", "Model Target", "Image Target", "Blender"],
     shortDescription:
       "An AR-based industrial maintenance training experience that guides users from hardware identification and troubleshooting to repair and component replacement.",
     detailedDescription:
@@ -1011,7 +1038,7 @@ export const projects: Project[] = [
     category: "AR",
     client: null,
     year: null,
-    technologies: ["Unity", "Vuforia Engine", "Model Target"],
+    technologies: ["Unity", "Vuforia Engine", "Model Target", "Blender", "Figma"],
     shortDescription:
       "An AR-based VMC operator training application that provides step-by-step guidance for machine operation and control tasks.",
     detailedDescription:

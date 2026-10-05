@@ -6,6 +6,7 @@ import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { NextProjectNav } from "@/components/project/NextProjectNav";
 import { CaseStudySection, CaseStudyList } from "@/components/project/CaseStudySection";
 import { ProjectFlow } from "@/components/ui/ProjectFlow";
+import { ProjectVisit } from "@/lib/game/GameProvider";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -38,6 +39,7 @@ export default async function ProjectPage({
 
   return (
     <article>
+      <ProjectVisit slug={project.slug} />
       <ProjectHero project={project} />
 
       <CaseStudySection title="Project Overview">

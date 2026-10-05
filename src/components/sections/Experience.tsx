@@ -6,8 +6,8 @@ export function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title="Where I've worked">
       <div className="flex flex-col gap-6">
-        {experienceEntries.map((entry) => (
-          <Reveal key={entry.id}>
+        {experienceEntries.map((entry, index) => (
+          <Reveal key={entry.id} variant={index % 2 === 0 ? "left" : "right"}>
             <div className="rounded-xl border border-border bg-surface p-6">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg font-semibold text-foreground">{entry.role}</h3>

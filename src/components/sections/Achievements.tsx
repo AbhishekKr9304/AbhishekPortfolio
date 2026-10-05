@@ -6,8 +6,8 @@ export function Achievements() {
   return (
     <Section id="achievements" eyebrow="Achievements" title="Recognition">
       <div className="flex flex-col gap-4">
-        {achievementEntries.map((entry) => (
-          <Reveal key={entry.id}>
+        {achievementEntries.map((entry, index) => (
+          <Reveal key={entry.id} variant="zoom" delayMs={index * 60}>
             <div className="rounded-xl border border-border bg-surface p-6">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg font-semibold text-foreground">{entry.title}</h3>

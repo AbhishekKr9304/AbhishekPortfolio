@@ -55,27 +55,112 @@ body {
   outline-offset: 2px;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--duration-slow) var(--ease-out-soft),
-    transform var(--duration-slow) var(--ease-out-soft);
+/* Native cursor is swapped for the gaze reticle on fine pointers, popups included */
+.has-reticle,
+.has-reticle *,
+.has-reticle ::backdrop {
+  cursor: none !important;
 }
 
-.reveal.is-visible {
+/* Hologram treatment for experiment cards */
+.holo-card {
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--duration-base), box-shadow var(--duration-base);
+}
+
+.holo-card::before,
+.holo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--duration-base);
+}
+
+.holo-card::before {
+  height: 45%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    color-mix(in srgb, var(--color-accent) 18%, transparent),
+    transparent
+  );
+  transform: translateY(-120%);
+}
+
+.holo-card::after {
+  background: repeating-linear-gradient(
+    0deg,
+    color-mix(in srgb, var(--color-accent) 7%, transparent) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+.holo-card:hover {
+  border-color: var(--color-accent);
+  border-style: solid;
+  box-shadow: 0 0 28px -8px var(--color-accent),
+    inset 0 0 28px -16px var(--color-accent);
+}
+
+.holo-card:hover::before {
   opacity: 1;
-  transform: translateY(0);
+  animation: holo-scan 1.6s var(--ease-out-soft) infinite;
+}
+
+.holo-card:hover::after {
+  opacity: 1;
+}
+
+.holo-card:hover .holo-title {
+  color: var(--color-accent);
+  animation: holo-flicker 0.45s steps(2, end) 1;
+}
+
+@keyframes holo-scan {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(260%);
+  }
+}
+
+@keyframes holo-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+
+/* Cheat code: sweep the whole page through the colour wheel */
+.cheat-overlay {
+  animation: cheat-hue 4s linear;
+}
+
+@keyframes cheat-hue {
+  from {
+    backdrop-filter: hue-rotate(0deg) saturate(1.6);
+  }
+  to {
+    backdrop-filter: hue-rotate(360deg) saturate(1.6);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 
   *,

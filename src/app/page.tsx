@@ -11,11 +11,13 @@ import { Achievements } from "@/components/sections/Achievements";
 import { XRLab } from "@/components/sections/XRLab";
 import { Playground } from "@/components/sections/Playground";
 import { Contact } from "@/components/sections/Contact";
+import { SkillsBanner } from "@/components/xr/SkillsBanner";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <SkillsBanner />
       <About />
       <WhatIBuild />
       <FeaturedProjects />

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { navItems } from "@/data/nav";
 import { projects } from "@/data/projects";
 import { SoundToggle } from "@/components/ui/SoundToggle";
+import { gameStore } from "@/lib/game/store";
 
 export function SiteNav() {
   const pathname = usePathname();
@@ -40,7 +41,10 @@ export function SiteNav() {
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-    if (indexOpen && !dialog.open) dialog.showModal();
+    if (indexOpen && !dialog.open) {
+      dialog.showModal();
+      gameStore.unlock("navigator");
+    }
     if (!indexOpen && dialog.open) dialog.close();
   }, [indexOpen]);
 

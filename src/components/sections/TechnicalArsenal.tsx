@@ -7,7 +7,7 @@ export function TechnicalArsenal() {
     <Section id="arsenal" eyebrow="Technical Arsenal" title="Tools of the trade">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category, index) => (
-          <Reveal key={category.id} delayMs={index * 60}>
+          <Reveal key={category.id} delayMs={index * 80} variant="flip">
             <div className="h-full rounded-xl border border-border bg-surface p-6">
               <h3 className="font-mono text-sm uppercase tracking-wider text-accent">
                 {category.label}

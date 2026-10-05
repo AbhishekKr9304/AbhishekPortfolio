@@ -1,11 +1,18 @@
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { WarpTunnel } from "@/components/xr/WarpTunnel";
 import { contactInfo } from "@/data/contact";
 
 export function Contact() {
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's build something">
+    <Section
+      id="contact"
+      eyebrow="Contact"
+      title="Let's build something"
+      className="relative isolate min-h-[80vh] overflow-hidden"
+    >
+      <WarpTunnel />
       <Reveal className="max-w-2xl">
         <p className="text-lg text-muted">
           Have an idea for an AR, VR, MR or interactive experience?
