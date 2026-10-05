@@ -62,7 +62,8 @@ export function HeroHUD() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-4 z-0 font-mono text-[10px] uppercase tracking-widest text-muted md:inset-10 md:text-xs"
+      // Inset clears the fixed logo, theme/Index buttons (top) and player badge (bottom)
+      className="pointer-events-none absolute inset-x-4 bottom-24 top-20 z-0 font-mono text-[10px] uppercase tracking-widest text-muted md:inset-x-10 md:top-24 md:text-xs"
     >
       <Corner className="left-0 top-0 border-l-2 border-t-2" />
       <Corner className="right-0 top-0 border-r-2 border-t-2" />

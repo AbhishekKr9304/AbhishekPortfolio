@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
-import { useSound } from "@/lib/sound/SoundProvider";
-import { playChiptune } from "./chiptune";
 import { zones } from "./quests";
 import { gameStore } from "./store";
 
@@ -19,21 +17,6 @@ export function useGame() {
 /** Watches the page and feeds game events into the store. Renders nothing. */
 export function GameTracker() {
   const pathname = usePathname();
-  const { muted } = useSound();
-  const mutedRef = useRef(muted);
-
-  useEffect(() => {
-    mutedRef.current = muted;
-  }, [muted]);
-
-  useEffect(() => {
-    gameStore.soundHandler = (sound) => {
-      if (!mutedRef.current) playChiptune(sound);
-    };
-    return () => {
-      gameStore.soundHandler = null;
-    };
-  }, []);
 
   // Zone discovery: a section counts once a good part of it is on screen
   useEffect(() => {

@@ -12,7 +12,7 @@ export function SkillsBanner() {
         {keywords.map((keyword) => (
           <li
             key={keyword}
-            className="text-lg font-bold uppercase tracking-tight text-white/20 transition-colors duration-300 hover:text-accent md:text-xl"
+            className="text-lg font-bold uppercase tracking-tight text-foreground/20 transition-colors duration-300 hover:text-accent md:text-xl"
           >
             {keyword}
           </li>

@@ -1,20 +1,43 @@
 @import "tailwindcss";
 
+/* Dark is the default; light applies when <html data-theme="light">.
+   Every text/background pairing below keeps at least 5:1 contrast. */
 :root {
+  color-scheme: dark;
   --background: #0a0b0d;
   --foreground: #f2f3f5;
+  --surface: #15171b;
+  --surface-elevated: #1c1f24;
+  --border: #2a2e35;
+  --muted: #9aa0a8;
+  --accent: #7dd3fc;
+  --accent-strong: #38bdf8;
+  --warn: #fbbf24;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #f5f7fa;
+  --foreground: #0e1116;
+  --surface: #ffffff;
+  --surface-elevated: #eef1f5;
+  --border: #d5dbe3;
+  --muted: #525c6b;
+  --accent: #0369a1;
+  --accent-strong: #075985;
+  --warn: #b45309;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: #15171b;
-  --color-surface-elevated: #1c1f24;
-  --color-border: #2a2e35;
-  --color-muted: #9aa0a8;
-  --color-accent: #7dd3fc;
-  --color-accent-strong: #38bdf8;
-  --color-warn: #fbbf24;
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-warn: var(--warn);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -53,6 +76,13 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Theme switch: the new theme is revealed by a growing circle (see ThemeToggle) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 /* Native cursor is swapped for the gaze reticle on fine pointers, popups included */

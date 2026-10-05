@@ -34,8 +34,6 @@ export interface GameSnapshot extends SavedProgress {
   cheatActive: boolean;
 }
 
-export type GameSound = "zone" | "quest" | "levelup" | "cheat";
-
 const emptyProgress: SavedProgress = { discovered: [], unlocked: [], viewedProjects: [] };
 
 function xpFor(progress: SavedProgress) {
@@ -60,7 +58,6 @@ class GameStore {
   private listeners = new Set<() => void>();
   private toastId = 0;
   private sessionStart = typeof window === "undefined" ? 0 : Date.now();
-  soundHandler: ((sound: GameSound) => void) | null = null;
 
   subscribe = (listener: () => void) => {
     this.listeners.add(listener);
@@ -112,7 +109,6 @@ class GameStore {
     const after = levelFor(xp);
     const next = { ...merged, xp };
     if (after.level > before) {
-      this.soundHandler?.("levelup");
       return { ...next, levelUp: { level: after.level, title: after.title } };
     }
     return next;
@@ -122,7 +118,6 @@ class GameStore {
     if (state.unlocked.includes(id)) return state;
     const quest = quests.find((q) => q.id === id);
     if (!quest) return state;
-    this.soundHandler?.("quest");
     const next = this.apply(state, { unlocked: [...state.unlocked, id] });
     return this.pushToast(next, { kind: "quest", label: "Quest complete", title: quest.title, xp: quest.xp });
   }
@@ -136,7 +131,6 @@ class GameStore {
     state = this.apply(state, { discovered: [...state.discovered, zoneId] });
     // The entry zone is counted quietly; the boot screen is still covering it
     if (zoneId !== zones[0]?.id) {
-      this.soundHandler?.("zone");
       state = this.pushToast(state, {
         kind: "zone",
         label: "Zone discovered",
@@ -170,7 +164,6 @@ class GameStore {
   }
 
   activateCheat() {
-    this.soundHandler?.("cheat");
     let state: GameSnapshot = { ...this.getSnapshot(), cheatActive: true };
     state = this.pushToast(state, { kind: "cheat", label: "Cheat activated", title: "Reality Override" });
     state = this.unlockInto(state, "secret");

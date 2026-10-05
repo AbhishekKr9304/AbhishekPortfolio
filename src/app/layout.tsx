@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SoundProvider } from "@/lib/sound/SoundProvider";
 import { SiteNav } from "@/components/layout/SiteNav";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +11,7 @@ import { GameTracker } from "@/lib/game/GameProvider";
 import { GameHUD } from "@/components/game/GameHUD";
 import { GameToasts } from "@/components/game/GameToasts";
 import { LevelUpOverlay } from "@/components/game/LevelUpOverlay";
+import { themeInitScript } from "@/lib/themeScript";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,28 +45,31 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // The pre-paint script sets data-theme before React hydrates
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <noscript>
           <style>{".boot-screen{display:none!important}"}</style>
         </noscript>
-        <SoundProvider>
-          <MotionProvider>
-            <BootSequence />
-            <GazeReticle />
-            <ScrollProgress />
-            <SkipToContent />
-            <SiteNav />
-            <main id="main-content" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-            <GameTracker />
-            <GameHUD />
-            <GameToasts />
-            <LevelUpOverlay />
-          </MotionProvider>
-        </SoundProvider>
+        <MotionProvider>
+          <BootSequence />
+          <GazeReticle />
+          <ScrollProgress />
+          <SkipToContent />
+          <SiteNav />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <GameTracker />
+          <GameHUD />
+          <GameToasts />
+          <LevelUpOverlay />
+        </MotionProvider>
       </body>
     </html>
   );

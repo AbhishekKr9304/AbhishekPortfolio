@@ -184,25 +184,25 @@ export const projects: Project[] = [
   gallery: [
     {
       type: "image",
-      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Env1.png",
+      src: "/ProjectsImage/LumaxDharuheraVRTraining/Env1.png",
       alt: "Virtual factory floor with a marked assembly area, tool station, material storage racks and quality inspection desk",
       caption: "Assembly area environment"
     },
     {
       type: "image",
-      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Env2.png",
+      src: "/ProjectsImage/LumaxDharuheraVRTraining/Env2.png",
       alt: "Top-down cutaway view of the full virtual factory building showing the training zones and assembly area layout",
       caption: "Factory layout overview"
     },
     {
       type: "image",
-      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Unity1.png",
+      src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity1.png",
       alt: "Unity scene view of the training start point facing the assembly workstation, with an info kiosk and a glowing teleport marker",
       caption: "Training start point in Unity"
     },
     {
       type: "image",
-      src: "/ProjectsImage/Lumax-Dharuhera-VR-Training/Unity2.png",
+      src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity2.png",
       alt: "Unity scene view of the assembly workstation inside a hazard-striped zone, with part tables and a Start Training floor marker",
       caption: "Assembly workstation in Unity"
     }
@@ -335,7 +335,44 @@ export const projects: Project[] = [
   url: "https://drive.google.com/file/d/1ifQ_m71NwJNZObGrGGjaMld30p2sxNmI/view?usp=sharing",
 },
 
-  gallery: [],
+  gallery: [
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/AssemblyLineDemo.png",
+      alt: "Mixed reality overlay of a holographic digital twin aligned over a real assembly line station",
+      caption: "Assembly line digital twin",
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/AiraRobotCobotInteraction.png",
+      alt: "Aira, a virtual robot assistant, standing beside a holographic cobot arm with P1 and P2 position markers on a real lab table",
+      caption: "Aira guiding cobot interaction",
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/AiraRobotIntructor.png",
+      alt: "Aira, the virtual robot instructor, floating in mixed reality next to a lab workstation",
+      caption: "Aira, the virtual instructor",
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/MR-AreaScan1.png",
+      alt: "Top-down view in Unity of the scanned lab space used to place mixed reality content",
+      caption: "MR area scan, top view",
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/MR-AreaScan2.png",
+      alt: "Perspective view of the scanned lab mesh in Unity with workstations and walls captured",
+      caption: "MR area scan mesh",
+    },
+    {
+      type: "image",
+      src: "/ProjectsImage/SmartLabXR/xrcc%20flow.jpg",
+      alt: "Flow diagram of the SmartLab XR application showing each stage of the experience",
+      caption: "Application flow",
+    },
+  ],
 
   status: "seeded"
 },
@@ -442,7 +479,32 @@ export const projects: Project[] = [
       provider: "google-drive",
       url: "https://drive.google.com/file/d/1FWm1x66TX93-3IvV8f3oWcvLtXB5Guhu/view?usp=drive_link"
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMSmartIntro/AR-LiveApplicationDemo1.png",
+        alt: "Live AR view with red arrows on the floor guiding the user toward the mobile cobot in the lab",
+        caption: "AR floor navigation",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMSmartIntro/AR-LiveApplicationDemo2.png",
+        alt: "Live AR view showing a Mobile Cobot information card with a Next button above the real robot",
+        caption: "Station introduction card",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMSmartIntro/AR-AreaScan2.png",
+        alt: "Scanned lab with AR labels and status panels placed over the Multi Process Robotics stations",
+        caption: "Labelled stations over the scan",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMSmartIntro/AR-AreaScan1.png",
+        alt: "Unity view of the scanned lab point cloud used to anchor AR content",
+        caption: "Lab area scan in Unity",
+      },
+    ],
     status: "seeded",
   },
   {
@@ -547,7 +609,158 @@ export const projects: Project[] = [
       provider: "google-drive",
       url: "https://drive.google.com/file/d/1zHsdsE5z5C7rwn2QPcTmh0Tqp1YPV6Xa/view?usp=sharing"
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145035.jpg",
+        alt: "VR view of the facility entrance with three doors labelled CPL, CPPF and CPS",
+        caption: "Facility entrance",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145100.jpg",
+        alt: "VR corridor with information posters and a teleport path leading through the facility",
+        caption: "Main corridor",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145122.jpg",
+        alt: "Long VR corridor lined with windows, posters and plants",
+        caption: "Corridor walkthrough",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145142.jpg",
+        alt: "VR reception area with an FSM information wall and the Cyber Physical Laboratory entrance",
+        caption: "Reception and lab entrance",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145217.jpg",
+        alt: "VR conference room with a long table, chairs and FSM branding on the wall",
+        caption: "Conference room",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145300.jpg",
+        alt: "VR view of the Multi Process Robotics line with rows of automation stations",
+        caption: "Multi Process Robotics line",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145323.jpg",
+        alt: "Wide VR view of the Multi Process Robotics area with stations and an industrial robot",
+        caption: "Robotics area overview",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145403.jpg",
+        alt: "Close VR view of automation workstations with monitors and control panels",
+        caption: "Automation workstations",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145512.jpg",
+        alt: "VR view of assembly cells with a cobot and parts storage bins",
+        caption: "Assembly cells",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145726.jpg",
+        alt: "VR lab with training kits on benches and a highlighted Mechanism Kit label",
+        caption: "Training kit lab",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145743.jpg",
+        alt: "VR training classroom with desks, chairs and a screen at the front",
+        caption: "Training classroom",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145801.jpg",
+        alt: "VR training classroom seen from the side with a long central table",
+        caption: "Classroom, side view",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-145819.jpg",
+        alt: "VR view of an integration stand and a CNC trainer kit beside a window",
+        caption: "Integration stand and CNC trainer",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture.JPG",
+        alt: "CNC trainer kit in VR with an information panel describing the kit",
+        caption: "CNC trainer kit details",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%201.JPG",
+        alt: "PLC trainer kit in VR with an information panel explaining programmable logic controllers",
+        caption: "PLC trainer kit details",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%203.JPG",
+        alt: "Sheet metal machine in VR with labels for the job detection and thickness sensors",
+        caption: "Machine sensor labels",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%204.JPG",
+        alt: "Lathe in VR with labels for spindle speed, depth of cut, feed rate and temperature sensors",
+        caption: "Lathe sensor labels",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%205.JPG",
+        alt: "Pipe bending machine in VR with an information panel describing how it works",
+        caption: "Pipe bending machine",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%206.JPG",
+        alt: "Lathe on display in VR with an information panel",
+        caption: "Lathe details",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%207.JPG",
+        alt: "Askar Mill 500 vertical machining centre in VR with an information panel",
+        caption: "Vertical machining centre",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/Capture%208.JPG",
+        alt: "Sheet metal machine in VR with an information panel describing its monitoring features",
+        caption: "Sheet metal machine details",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-150117.jpg",
+        alt: "Lathe displayed in a VR showroom bay with FSM branding",
+        caption: "Lathe showroom bay",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-150129.jpg",
+        alt: "Pipe bending machine displayed in a VR showroom bay",
+        caption: "Pipe bending showroom bay",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-150151.jpg",
+        alt: "Vertical machining centre displayed in a VR showroom bay",
+        caption: "VMC showroom bay",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/FSMVirtualTour/com.oculus.vrshell-20241014-150206.jpg",
+        alt: "Sheet metal machine displayed in a VR showroom bay",
+        caption: "Sheet metal showroom bay",
+      },
+    ],
     status: "seeded",
   },
   {
@@ -629,7 +842,62 @@ export const projects: Project[] = [
       provider: "google-drive",
       url: "https://drive.google.com/file/d/1a-hrcBdxPS0_5iZm-ouIdmKqp3_G_Twy/view?usp=sharing"
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131148.jpg",
+        alt: "Green arrows on the ground in VR guiding the user toward the robotic welding cell",
+        caption: "Guided approach to the cell",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131203.jpg",
+        alt: "Robotic welding cell exterior in VR with gas cylinders, a welding table and guide arrows",
+        caption: "Welding cell exterior",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131242.jpg",
+        alt: "Robotic welding cell from another angle with guide arrows leading to it",
+        caption: "Cell from the side",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131310.jpg",
+        alt: "Front view of the robotic welding cell with HMI screen, tower lights and robots inside",
+        caption: "Front view",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/Capture%201.JPG",
+        alt: "VR controller pointing at the HMI with a component menu and an explanation of the human machine interface",
+        caption: "Exploring the HMI",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/Capture%202.JPG",
+        alt: "Component menu with details of the KUKA KR30 R2100 material handling robot",
+        caption: "Material handling robot details",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131450.jpg",
+        alt: "Robotic welding cell with outer walls hidden to reveal the robots and equipment inside",
+        caption: "Inside view, walls hidden",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/Capture.JPG",
+        alt: "Two orange industrial robots beside a conveyor inside the welding cell",
+        caption: "Welding and handling robots",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/RoboticWeldingCell/com.oculus.vrshell-20241014-131119.jpg",
+        alt: "Close view of the welding robot, material handling robot and conveyor",
+        caption: "Robots and conveyor",
+      },
+    ],
     status: "seeded"
   },
   {
@@ -727,9 +995,46 @@ export const projects: Project[] = [
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1ed73JJNbmD5lCGXsgLwtXuG98MuYBeoQ/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1NwlqeXeZWvWPupE7lc1wvNcMnXzsXvzY/view?usp=sharing"
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-1.png",
+        alt: "VR controller connecting a pneumatic hose between a manifold and a directional control valve",
+        caption: "Connecting pneumatic hoses",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-2.png",
+        alt: "VR controller attaching an air supply hose from the service unit to the manifold",
+        caption: "Connecting the air supply",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-3.png",
+        alt: "Problem description board with a stacking device drawing and its pneumatic circuit diagram",
+        caption: "Problem and circuit diagram",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-4.png",
+        alt: "Unity scene view of the pneumatic trainer workbench with instruction boards",
+        caption: "Trainer workbench in Unity",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-5.png",
+        alt: "Unity view of the trainer board with valves, gauges and a problem description panel",
+        caption: "Trainer board layout",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/PneumaticTrainerVR/PTK-6.png",
+        alt: "Unity view of the pneumatic components laid out on the trainer board",
+        caption: "Pneumatic components",
+      },
+    ],
     status: "seeded"
   },
   {
@@ -819,8 +1124,48 @@ export const projects: Project[] = [
       "Provided visual repair guidance and a fallback replacement workflow.",
       "Demonstrated a hybrid Vuforia tracking approach for different component viewpoints."
     ],
-    video: { provider: "none" },
-    gallery: [],
+    video: {
+      provider: "google-drive",
+      url: "https://drive.google.com/file/d/17CasnIwHFfYcApPBL--eKNZKLztpWECq/view?usp=sharing"
+    },
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-1.png",
+        alt: "Live AR on a real training machine asking the user to verify whether the X6A port is connected",
+        caption: "Guided maintenance check",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-2.png",
+        alt: "Live AR highlighting a machine part in green on the real equipment",
+        caption: "Part highlighted in AR",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-3.png",
+        alt: "Unity model target of the machine with a Select an option menu",
+        caption: "Model target and menu",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-4.png",
+        alt: "Unity animation timeline for a maintenance sequence on the machine model",
+        caption: "Maintenance animation sequence",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-5.png",
+        alt: "Unity image target scene with an animated sensor replacement sequence",
+        caption: "Sensor replacement sequence",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/ARMaintenance/ARMaintenance-6.png",
+        alt: "Unity image target scene with an animated RFID maintenance sequence",
+        caption: "RFID maintenance sequence",
+      },
+    ],
     status: "seeded"
   },
   {
@@ -1122,7 +1467,44 @@ export const projects: Project[] = [
       provider: "google-drive",
       url: "https://drive.google.com/file/d/1lyGE7x8nyw0KO4j_QeMRoTqTygkHBCqJ/view?usp=sharing"
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-2.png",
+        alt: "VMC AR practicals menu listing spindle, coolant, door and tool change control",
+        caption: "Practicals menu",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-4.png",
+        alt: "Prompt asking the user to point the camera at the Jyoti VMC control panel",
+        caption: "Scanning the control panel",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-6.png",
+        alt: "Live AR on a real VMC showing the Module 2 head coolant control prerequisites over the control panel",
+        caption: "Live AR on the VMC",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-1.png",
+        alt: "Unity view of the VMC control panel model with prerequisite and spindle rotation module panels",
+        caption: "Control panel setup in Unity",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-5.png",
+        alt: "Unity view of the control panel with the Module 3 coolant control panel",
+        caption: "Coolant control module",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/VMCAR/VMCAR-3.png",
+        alt: "VMC AR practicals menu",
+        caption: "Practicals menu, alternate view",
+      },
+    ],
     status: "seeded"
   },
   {
@@ -1195,7 +1577,14 @@ export const projects: Project[] = [
       "Built a warehouse environment model to support AMR navigation testing and debugging."
     ],
     video: { provider: "none" },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/AMR/AllFile.png",
+        alt: "AMR simulation environment in Gazebo showing the robot navigating through a warehouse with shelves and obstacles",
+        caption: "All files screenshot",
+      },
+    ],
     status: "seeded"
   },
 ];

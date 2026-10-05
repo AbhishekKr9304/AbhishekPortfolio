@@ -71,7 +71,7 @@ export function BootSequence() {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.85) 100%)",
+                "radial-gradient(ellipse at center, transparent 45%, color-mix(in srgb, var(--color-foreground) 18%, transparent) 100%)",
             }}
           />
           <div className="relative w-[min(88vw,26rem)] font-mono text-xs text-muted">

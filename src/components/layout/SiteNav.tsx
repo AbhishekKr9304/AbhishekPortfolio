@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/data/nav";
 import { projects } from "@/data/projects";
-import { SoundToggle } from "@/components/ui/SoundToggle";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { gameStore } from "@/lib/game/store";
 
 export function SiteNav() {
@@ -81,7 +81,7 @@ export function SiteNav() {
       </nav>
 
       <div className="fixed right-6 top-6 z-40 flex items-center gap-3">
-        <SoundToggle />
+        <ThemeToggle />
         <button
           type="button"
           onClick={() => setIndexOpen(true)}

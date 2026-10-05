@@ -4,11 +4,16 @@ import { useEffect, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Sparkles } from "@react-three/drei";
 import { MathUtils, type Group } from "three";
+import { useTheme } from "@/lib/theme";
 
-const ACCENT = "#7dd3fc";
-const ACCENT_STRONG = "#38bdf8";
+// Scene colours per theme: a glowing core on dark, a crisp glassy one on light
+const palettes = {
+  dark: { accent: "#7dd3fc", accentStrong: "#38bdf8", core: "#07131c", emissive: 0.1, metalness: 0.7 },
+  light: { accent: "#0369a1", accentStrong: "#0284c7", core: "#e0f2fe", emissive: 0.04, metalness: 0.2 },
+};
+type Palette = (typeof palettes)["dark"];
 
-function Core() {
+function Core({ palette }: { palette: Palette }) {
   const group = useRef<Group>(null);
   const rings = useRef<Group>(null);
   const pointer = useRef({ x: 0, y: 0 });
@@ -43,15 +48,15 @@ function Core() {
       <group ref={group} scale={1.25}>
         <mesh>
           <icosahedronGeometry args={[1.6, 1]} />
-          <meshBasicMaterial color={ACCENT} wireframe transparent opacity={0.28} />
+          <meshBasicMaterial color={palette.accent} wireframe transparent opacity={0.28} />
         </mesh>
         <mesh scale={0.82}>
           <icosahedronGeometry args={[1.6, 0]} />
           <meshStandardMaterial
-            color="#0b1d2a"
-            emissive={ACCENT_STRONG}
-            emissiveIntensity={0.18}
-            metalness={0.7}
+            color={palette.core}
+            emissive={palette.accentStrong}
+            emissiveIntensity={palette.emissive}
+            metalness={palette.metalness}
             roughness={0.25}
             flatShading
           />
@@ -59,11 +64,11 @@ function Core() {
         <group ref={rings}>
           <mesh rotation={[Math.PI / 2.4, 0, 0]}>
             <torusGeometry args={[2.5, 0.012, 8, 160]} />
-            <meshBasicMaterial color={ACCENT} transparent opacity={0.5} />
+            <meshBasicMaterial color={palette.accent} transparent opacity={0.5} />
           </mesh>
           <mesh rotation={[0, Math.PI / 3, Math.PI / 5]}>
             <torusGeometry args={[2.85, 0.008, 8, 160]} />
-            <meshBasicMaterial color={ACCENT} transparent opacity={0.3} />
+            <meshBasicMaterial color={palette.accent} transparent opacity={0.3} />
           </mesh>
         </group>
       </group>
@@ -72,6 +77,8 @@ function Core() {
 }
 
 export default function HeroScene({ active, reduceMotion }: { active: boolean; reduceMotion: boolean }) {
+  const palette = palettes[useTheme()];
+
   return (
     <Canvas
       dpr={[1, 1.5]}
@@ -81,10 +88,10 @@ export default function HeroScene({ active, reduceMotion }: { active: boolean; r
       frameloop={reduceMotion ? "demand" : active ? "always" : "never"}
     >
       <ambientLight intensity={0.4} />
-      <directionalLight position={[4, 5, 6]} intensity={1.4} />
-      <pointLight position={[-4, -2, 3]} intensity={25} color={ACCENT_STRONG} />
-      <Core />
-      <Sparkles count={70} scale={[12, 7, 6]} size={2.2} speed={0.3} opacity={0.6} color={ACCENT} />
+      <directionalLight position={[4, 5, 6]} intensity={0.9} />
+      <pointLight position={[-4, -2, 3]} intensity={25} color={palette.accentStrong} />
+      <Core palette={palette} />
+      <Sparkles count={70} scale={[12, 7, 6]} size={2.2} speed={0.3} opacity={0.6} color={palette.accent} />
     </Canvas>
   );
 }

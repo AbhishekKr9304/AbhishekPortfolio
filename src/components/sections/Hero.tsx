@@ -76,12 +76,21 @@ export function Hero() {
         }}
       />
       <HeroHUD />
+      {/* Darkens the scene directly behind the text so it keeps at least 5:1 contrast */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-[5]"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 45% at 50% 50%, color-mix(in srgb, var(--color-background) 85%, transparent) 0%, color-mix(in srgb, var(--color-background) 60%, transparent) 55%, transparent 85%)",
+        }}
+      />
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
         style={{ scale: sceneScale, opacity: sceneOpacity }}
       >
-        <div className="h-full w-full opacity-60 md:opacity-90">
+        <div className="h-full w-full opacity-40 md:opacity-50">
           <HeroScene active={inView} reduceMotion={reduceMotion} />
         </div>
       </motion.div>
@@ -110,7 +119,7 @@ export function Hero() {
         <motion.h1
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.035 } } }}
           aria-label="Abhishek Kumar"
-          className="mt-6 text-[length:var(--text-display)] font-bold leading-[0.95] text-foreground [perspective:600px]"
+          className="mt-6 text-[length:var(--text-display)] font-bold leading-[0.95] text-foreground [perspective:600px] [text-shadow:0_2px_24px_var(--background)]"
         >
           {nameLetters.map((letter, index) => (
             <motion.span
@@ -133,13 +142,13 @@ export function Hero() {
           ))}
         </motion.h1>
 
-        <motion.h2 variants={item} className="mt-4 text-xl font-medium text-muted md:text-2xl">
+        <motion.h2 variants={item} className="mt-4 text-xl font-medium text-foreground/85 [text-shadow:0_1px_12px_var(--background)] md:text-2xl">
           XR Developer
         </motion.h2>
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-balance text-base text-muted md:text-lg"
+          className="mt-6 max-w-2xl text-balance text-base text-foreground/85 [text-shadow:0_1px_12px_var(--background)] md:text-lg"
         >
           I build immersive experiences that connect people, technology and the
           physical world.
