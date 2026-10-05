@@ -12,7 +12,7 @@ export const achievementEntries: AchievementEntry[] = [
     title: "XRCC Hackathon",
     project: "SmartLab XR — Industry 4.0 Experience",
     description:
-      "Created SmartLab XR, a project demonstrating lab facilities immersively through an MR-based application.",
+      " SmartLab XR, a project demonstrating lab facilities immersively through an MR-based application.",
     date: "May 2026",
   },
 
