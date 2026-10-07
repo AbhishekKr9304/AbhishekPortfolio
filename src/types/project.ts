@@ -19,6 +19,8 @@ export interface ProjectVideo {
   url?: string;
   posterSrc?: string;
   title?: string;
+  /** Sentence shown below the video describing which module/part of the project it covers. */
+  caption?: string;
 }
 
 export interface Project {
@@ -42,6 +44,8 @@ export interface Project {
   solutions: string[];
   results: string[];
   video: ProjectVideo;
+  /** Optional additional videos (e.g. one per module). When set, these are shown as a playlist instead of `video`. */
+  videos?: ProjectVideo[];
   gallery: ProjectMediaItem[];
   status: ProjectStatus;
 }

@@ -1,6 +1,6 @@
 import type { Project } from "@/types/project";
 import { Tag } from "@/components/ui/Tag";
-import { VideoPlayer } from "@/components/ui/VideoPlayer";
+import { ProjectVideos } from "@/components/project/ProjectVideos";
 
 export function ProjectHero({ project }: { project: Project }) {
   return (
@@ -21,7 +21,10 @@ export function ProjectHero({ project }: { project: Project }) {
           </div>
         )}
         <div className="mt-10">
-          <VideoPlayer video={project.video} title={project.title} />
+          <ProjectVideos
+            videos={project.videos?.length ? project.videos : [project.video]}
+            title={project.title}
+          />
         </div>
       </div>
     </header>

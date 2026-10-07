@@ -3,379 +3,583 @@ import type { Project } from "@/types/project";
 const CONTENT_NEEDED = "[CONTENT NEEDED]";
 
 export const projects: Project[] = [
-{
-  slug: "lumax-dharuhera-vr-training",
-
-  title: "Lumax Dharuhera VR Training",
-
-  discipline: "XR",
-
-  category: "VR",
-
-  client: "Lumax Dharuhera",
-
-  year: "2025",
-
-  technologies: [
-    "Unity",
-    "C#",
-    "Meta Quest",
-    "XR Interaction",
-    "VR Interaction",
-    "Web Application",
-    "REST API",
-    "Figma"
-  ],
-
-  shortDescription:
-    "An immersive VR-based assembly line training system integrated with a web application, designed to train, guide, and evaluate operators through a realistic virtual manufacturing environment.",
-
-  detailedDescription:
-    "Lumax Dharuhera VR Training is an immersive virtual reality training solution developed to simulate an industrial assembly workstation and provide trainees with a safe, interactive, and repeatable learning environment. The application follows a structured workflow beginning with Authentication and Language Selection, followed by Awareness, Hardware Introduction, Assembly Line Simulation, Training, and Evaluation. Trainees can first understand the workstation and observe the assembly process, then perform the process through guided instructions, and finally complete the assembly independently for performance assessment. The VR experience is integrated with a web application that enables training information, trainee progress, and performance data to be accessed and reviewed through a centralized interface. The application supports two languages, allowing training content and instructions to be presented according to the user's selected language.",
-
-  objective:
-    "The primary objective of the project is to provide an immersive and structured VR-based assembly line training system that allows trainees to understand the workstation, learn SOP-based procedures, practice assembly operations, and independently demonstrate their skills. The solution also integrates a web application to support centralized access to training information, trainee progress, and performance assessment data.",
-
-  problem:
-    "Traditional assembly line training requires access to physical workstations, tools, components, and continuous trainer supervision. Repeated training can also require production resources and may not provide the same learning experience to every trainee. There is also a need to evaluate whether trainees can correctly perform the required operations after completing their training. The project addresses these challenges by recreating the assembly workstation and workflow in a virtual environment, allowing trainees to practice repeatedly while following the defined SOP. The integrated web application provides an additional layer for managing training information and reviewing trainee performance.",
-
-  flow: [
-    {
-      label: "Authentication",
-      description:
-        "Users authenticate themselves before accessing the training application."
-    },
-    {
-      label: "Language Selection",
-      description:
-        "Users select their preferred language for instructions, UI, and training content."
-    },
-    {
-      label: "Awareness",
-      description:
-        "Introduces trainees to the overall workstation, assembly process, and training environment."
-    },
-    {
-      label: "Hardware Introduction",
-      description:
-        "Allows trainees to explore and understand the tools, components, fixtures, and equipment used at the workstation."
-    },
-    {
-      label: "Assembly Line Simulation",
-      description:
-        "Provides a virtual demonstration of the assembly process and the required standard operating procedure."
-    },
-    {
-      label: "Training",
-      description:
-        "Provides guided practice of the assembly process through interactive VR tasks."
-    },
-    {
-      label: "Step-by-Step Guided Assembly",
-      description:
-        "Guides trainees through individual assembly operations using instructions, interactions, and contextual feedback."
-    },
-    {
-      label: "Evaluation",
-      description:
-        "Allows trainees to perform the assembly process after completing the guided training."
-    },
-    {
-      label: "Independent Task Execution",
-      description:
-        "Trainees independently perform the required operations without continuous step-by-step guidance."
-    },
-    {
-      label: "Performance Assessment",
-      description:
-        "Records and evaluates trainee performance based on predefined task and SOP requirements."
-    },
-    {
-      label: "VR-Integrated Web Application",
-      description:
-        "Provides a web-based interface for accessing trainee information, training progress, and performance data."
-    }
-  ],
-
-  userJourney: [
-    "Authenticate and access the training application.",
-    "Select the preferred training language.",
-    "Enter the VR training environment.",
-    "Explore and understand the workstation and its components.",
-    "Learn about the tools, fixtures, and equipment used in the workstation.",
-    "Observe the assembly line simulation to understand the complete workflow and SOP.",
-    "Start the guided training module.",
-    "Follow step-by-step instructions to perform each assembly operation.",
-    "Interact with tools, components, fixtures, and equipment using VR interactions.",
-    "Complete the guided training sequence.",
-    "Enter the evaluation module.",
-    "Perform the complete assembly process independently.",
-    "Use the hint system when assistance is required.",
-    "Complete the evaluation process.",
-    "Generate and record trainee performance data.",
-    "Access training and evaluation information through the integrated web application.",
-    "Supervisors can review trainee progress and performance through the web-based interface."
-  ],
-
-  features: [
-    "Immersive VR assembly line training",
-    "Authentication and user access",
-    "Two-language support",
-    "Awareness module",
-    "Interactive hardware introduction",
-    "Assembly line simulation",
-    "Step-by-step guided training",
-    "Interactive tool and component handling",
-    "SOP-based task execution",
-    "Independent evaluation mode",
-    "Hint and guidance system",
-    "Task validation",
-    "Performance assessment",
-    "Trainee progress tracking",
-    "VR-integrated web application",
-    "Web-based training and evaluation data",
-    "Supervisor performance monitoring"
-  ],
-
-  role:
-    "XR Developer responsible for designing and developing the immersive VR training experience, implementing the training workflow, building interactive systems, integrating VR hardware, and connecting the VR training experience with the web-based application.",
-
-  contribution:
-    "Designed and developed the VR training workflow in Unity, implemented interactive component and tool handling, developed the Awareness, Training, and Evaluation modules, created step-based training logic, implemented task validation and guidance systems, integrated VR interactions using the Meta XR SDK, implemented multilingual training support, and contributed to the integration between the VR application and the web-based system for trainee management, progress tracking, and performance evaluation.",
-
-  challenges: [
-    "Creating realistic and intuitive interactions for industrial tools and components.",
-    "Recreating the physical assembly workflow accurately in a virtual environment.",
-    "Ensuring trainees follow the correct SOP and sequence of operations.",
-    "Designing a guided training experience while keeping the evaluation independent.",
-    "Validating trainee actions across multiple assembly steps.",
-    "Providing clear instructions and feedback without interrupting the immersive experience.",
-    "Supporting multiple languages across the training workflow.",
-    "Synchronizing relevant training and performance information between the VR application and web application."
-  ],
-
-  solutions: [
-    "Implemented interactive VR objects and workstation components to recreate the physical training environment.",
-    "Developed a step-based training architecture to control the sequence of assembly operations.",
-    "Implemented interaction validation to detect whether trainees perform required actions correctly.",
-    "Added contextual instructions, visual guidance, and hints to assist trainees during the training phase.",
-    "Separated guided Training and independent Evaluation modes to distinguish learning from performance assessment.",
-    "Implemented multilingual content support so users can select their preferred training language.",
-    "Integrated the VR application with a web-based system to provide centralized access to trainee information, training progress, and evaluation data."
-  ],
-
-  results: [
-    "Created a repeatable VR-based assembly line training environment.",
-    "Enabled trainees to familiarize themselves with the workstation before physical training.",
-    "Provided a structured workflow from awareness to guided training and independent evaluation.",
-    "Enabled trainees to practice assembly operations in a controlled virtual environment.",
-    "Provided consistent SOP-based training through an interactive VR experience.",
-    "Enabled multilingual access to the training experience.",
-    "Connected the VR training experience with a web application for centralized training and performance information.",
-    "Provided a foundation for supervisors to monitor trainee progress and review evaluation results."
-  ],
-
-  video: {
-  provider: "google-drive",
-  url: "https://drive.google.com/file/d/1W8gWQSA2msP_javTCAKIAnkD-XcqeL8T/view?usp=drive_link",
-  title: "Lumax Dharuhera VR Training"
-},
-
-  gallery: [
-    {
-      type: "image",
-      src: "/ProjectsImage/LumaxDharuheraVRTraining/Env1.png",
-      alt: "Virtual factory floor with a marked assembly area, tool station, material storage racks and quality inspection desk",
-      caption: "Assembly area environment"
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/LumaxDharuheraVRTraining/Env2.png",
-      alt: "Top-down cutaway view of the full virtual factory building showing the training zones and assembly area layout",
-      caption: "Factory layout overview"
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity1.png",
-      alt: "Unity scene view of the training start point facing the assembly workstation, with an info kiosk and a glowing teleport marker",
-      caption: "Training start point in Unity"
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity2.png",
-      alt: "Unity scene view of the assembly workstation inside a hazard-striped zone, with part tables and a Start Training floor marker",
-      caption: "Assembly workstation in Unity"
-    }
-  ],
-
-  status: "seeded"
-},
   {
-  slug: "smartlab-xr",
+    slug: "dell-electronics-manufacturing-vr-training",
 
-  title: "SmartLab XR",
+    title: "Dell Electronics Manufacturing VR Training",
 
-  discipline: "XR",
+    discipline: "XR",
 
-  category: "MR",
+    category: "VR",
 
-  client: null,
+    client: "Dell",
 
-  year: "2026",
+    year: "2026",
 
-  technologies: [
-    "Unity",
-    "Multiset.AI",
-    "Meta All in One SDK",
-    "Blender",
-    "LiDAR",
-    "Figma"
-  ],
+    technologies: [
+      "Unity",
+      "C#",
+      "Meta Quest",
+      "Meta XR All-in-One SDK",
+      "XR Interaction",
+      "VR Interaction",
+      "Web Application",
+      "REST API",
+      "Figma",
+    ],
 
-  shortDescription:
-    "An immersive AR smart-lab experience that connects physical manufacturing equipment with interactive digital information, indoor navigation, and real-time machine data.",
+    shortDescription:
+      "An immersive VR-based electronics manufacturing training system designed to teach trainees electronics fundamentals, component identification, soldering practices, SOPs, safety procedures, and defect identification through interactive virtual training.",
 
-  detailedDescription:
-    "SmartLab XR is an augmented reality experience designed to transform a physical smart manufacturing laboratory into an interactive digital learning environment. The application allows users to explore industrial machines through spatially aligned AR content, access machine information, navigate through the laboratory, and visualize real-time industrial data. By combining spatial tracking, interactive 3D content, and IIoT integration, the experience creates a bridge between physical manufacturing infrastructure and digital learning.",
+    detailedDescription:
+      "Dell Electronics Manufacturing VR Training is an immersive virtual reality learning solution developed to provide trainees with a safe, interactive, and repeatable environment for learning electronics manufacturing processes. The training experience is structured into progressive learning modules that introduce trainees to the electronics manufacturing industry, basic electronic components, measurement techniques, soldering practices, standard operating procedures, safety measures, and common manufacturing defects. The application combines interactive VR experiences, guided instructions, demonstrations, hands-on component identification, and practical activities to help trainees understand both theoretical concepts and manufacturing practices. The training environment is designed to reduce dependency on physical training equipment while providing a consistent and engaging learning experience.",
 
-  objective:
-    "The objective was to create an intuitive AR layer over the smart manufacturing laboratory so that users could easily discover machines, understand their functions, access contextual information, and interact with digital representations of the lab infrastructure. The experience was designed to demonstrate how AR can improve industrial learning, machine awareness, and interaction within an Industry 4.0 environment.",
+    objective:
+      "The primary objective of the project is to provide an immersive and structured VR-based electronics manufacturing training platform that enables trainees to learn fundamental electronics concepts, identify electronic components, understand soldering practices, follow SOPs, recognize manufacturing defects, and apply appropriate safety measures in a controlled virtual environment.",
 
-  problem:
-    "Smart manufacturing laboratories contain a large number of machines, systems, and technologies that can be difficult for new users to understand and navigate. Conventional displays and static information provide limited context and require users to move between physical equipment and separate information sources. There was a need for a more immersive way to connect machine information directly with the physical equipment in the laboratory.",
+    problem:
+      "Traditional electronics manufacturing training often requires access to physical components, soldering equipment, measurement instruments, production workstations, and continuous trainer supervision. Repeated practical training can consume physical resources and may expose beginners to safety risks when working with tools and equipment. There is also a need for a consistent training experience that allows trainees to learn and practice fundamental concepts before entering a real manufacturing environment. The project addresses these challenges by creating an interactive VR training environment where trainees can learn concepts, interact with virtual components and equipment, practice procedures, and understand correct and incorrect manufacturing practices in a safe and repeatable environment.",
 
-  flow: [
-    {
-      label: "Scan & Initialize",
-      description:
-        "The user launches the experience and scans the designated environment or target to establish the AR experience."
+    flow: [
+      {
+        label: "Training Introduction",
+        description:
+          "Introduces trainees to the VR learning environment and provides an overview of the electronics manufacturing training program.",
+      },
+      {
+        label: "Module 1 – Industry & Role Orientation",
+        description:
+          "Introduces the electronics manufacturing industry, assembly line environment, and the role and responsibilities of an electronics hardware assembly operator.",
+      },
+      {
+        label: "Electronics Manufacturing Overview",
+        description:
+          "Provides trainees with an understanding of the electronics manufacturing process and the importance of following standardized procedures.",
+      },
+      {
+        label: "Module 2 – Electronics Fundamentals & Component Identification",
+        description:
+          "Introduces the fundamentals of electricity and electronics and teaches trainees how to identify commonly used electronic components.",
+      },
+      {
+        label: "Component Identification",
+        description:
+          "Allows trainees to interact with and identify electronic components such as resistors, diodes, capacitors, and other basic components.",
+      },
+      {
+        label: "Component Values & Polarity",
+        description:
+          "Teaches trainees how to interpret component values, resistor markings, colour codes, SMD markings, and component polarity.",
+      },
+      {
+        label: "Multimeter Hands-on Experience",
+        description:
+          "Provides an interactive virtual multimeter activity where trainees learn to select the appropriate measurement mode, position probes, and measure electronic components.",
+      },
+      {
+        label: "Module 3 – Soldering & Manufacturing Practices",
+        description:
+          "Introduces soldering fundamentals and the correct practices required when working with electronic components and manufacturing equipment.",
+      },
+      {
+        label: "Standard Operating Procedure",
+        description:
+          "Teaches trainees how to follow defined SOPs and perform manufacturing tasks in the correct sequence.",
+      },
+      {
+        label: "Dos and Don'ts",
+        description:
+          "Demonstrates correct and incorrect practices to help trainees understand expected workplace behaviour and manufacturing procedures.",
+      },
+      {
+        label: "Defect Identification",
+        description:
+          "Introduces common manufacturing and soldering defects and helps trainees understand how to identify incorrect outcomes.",
+      },
+      {
+        label: "Safety Measures",
+        description:
+          "Educates trainees about essential safety practices, precautions, and safe handling procedures within an electronics manufacturing environment.",
+      },
+      {
+        label: "Assessment & Knowledge Validation",
+        description:
+          "Provides interactive activities and knowledge checks to validate the trainee's understanding of the training content.",
+      },
+    ],
+
+    userJourney: [
+      "Enter the Dell electronics manufacturing VR training environment.",
+      "Understand the purpose and structure of the training program.",
+      "Learn about the electronics manufacturing industry and assembly line environment.",
+      "Understand the role and responsibilities of an electronics hardware assembly operator.",
+      "Learn the fundamentals of electricity and electronics.",
+      "Explore and identify basic electronic components.",
+      "Learn how to read resistor values and colour codes.",
+      "Understand SMD resistor markings and EIA-96 identification.",
+      "Learn how to identify component polarity, including diode polarity.",
+      "Interact with electronic components in the virtual environment.",
+      "Learn the basic operation of a digital multimeter.",
+      "Select the appropriate multimeter measurement mode.",
+      "Position the probes correctly and perform virtual component measurements.",
+      "Learn soldering fundamentals and correct soldering practices.",
+      "Understand and follow standard operating procedures.",
+      "Learn the correct dos and don'ts of electronics manufacturing.",
+      "Identify common soldering and manufacturing defects.",
+      "Learn essential safety measures and precautions.",
+      "Complete interactive learning activities and knowledge checks.",
+      "Validate understanding of the completed training modules.",
+    ],
+
+    features: [
+      "Immersive VR electronics manufacturing training",
+      "Structured modular learning experience",
+      "Industry and role orientation",
+      "Electronics fundamentals training",
+      "Interactive electronic component identification",
+      "Resistor colour code training",
+      "SMD resistor identification",
+      "EIA-96 code identification",
+      "Component polarity identification",
+      "Virtual multimeter hands-on experience",
+      "Resistance measurement training",
+      "Diode measurement training",
+      "Capacitance measurement training",
+      "Interactive soldering training",
+      "SOP-based learning",
+      "Dos and Don'ts training",
+      "Manufacturing defect identification",
+      "Safety measures and precautions",
+      "Interactive knowledge validation",
+      "Guided VR learning experience",
+      "Hands-on virtual interaction with electronic components",
+    ],
+
+    role: "XR Developer responsible for designing and developing the immersive VR training experience, implementing interactive learning modules, creating VR-based component interactions, developing training logic, integrating Meta Quest hardware, and implementing interactive activities for electronics manufacturing education.",
+
+    contribution:
+      "Designed and developed the VR training experience in Unity, implemented the modular training architecture, developed interactive learning experiences for electronics fundamentals and component identification, created virtual interactions for resistors, diodes, capacitors, and other electronic components, developed the multimeter hands-on experience, implemented guided training interactions for dial selection and probe placement, developed soldering and SOP learning content, implemented defect identification and safety training experiences, created interactive knowledge validation activities, integrated Meta Quest and Meta XR interaction systems, and contributed to the overall UX and training workflow.",
+
+    challenges: [
+      "Converting electronics manufacturing concepts into intuitive and engaging VR learning experiences.",
+      "Creating realistic interactions with small electronic components in a VR environment.",
+      "Designing virtual activities that accurately represent real-world electronics measurement procedures.",
+      "Making component identification and value-reading activities easy to understand for beginners.",
+      "Simulating practical multimeter interactions within a virtual environment.",
+      "Communicating correct soldering practices and manufacturing procedures through immersive content.",
+      "Clearly demonstrating the difference between correct practices and common manufacturing defects.",
+      "Presenting safety information in an engaging way without interrupting the learning experience.",
+      "Maintaining a consistent training workflow across multiple learning modules.",
+    ],
+
+    solutions: [
+      "Implemented modular VR training architecture to organize the learning experience into structured topics.",
+      "Created interactive electronic components that trainees can inspect and identify inside the virtual environment.",
+      "Developed guided component-identification activities for resistors, diodes, capacitors, and other electronic components.",
+      "Implemented an interactive virtual multimeter experience with selectable measurement modes and probe-based interaction.",
+      "Added guided instructions to help trainees correctly position the multimeter dial and probes during measurement activities.",
+      "Created interactive learning experiences for resistor colour codes, SMD markings, and EIA-96 identification.",
+      "Developed structured soldering, SOP, dos and don'ts, defect identification, and safety training content.",
+      "Used visual guidance, interactive elements, instructions, and feedback to reinforce correct trainee actions.",
+      "Organized the training into progressive modules so trainees can build knowledge from fundamental concepts toward practical manufacturing practices.",
+    ],
+
+    results: [
+      "Created an immersive VR-based electronics manufacturing training environment.",
+      "Developed three structured training modules covering industry orientation, electronics fundamentals, and soldering/manufacturing practices.",
+      "Enabled trainees to learn electronic component identification in an interactive virtual environment.",
+      "Provided a virtual hands-on experience for learning basic multimeter measurements.",
+      "Enabled trainees to understand resistor values, colour codes, SMD markings, and EIA-96 identification.",
+      "Provided structured training on soldering practices and standard operating procedures.",
+      "Enabled trainees to understand common manufacturing defects and incorrect practices.",
+      "Provided an immersive environment for learning essential electronics manufacturing safety measures.",
+      "Created a repeatable training experience that can be used before trainees enter a physical manufacturing environment.",
+    ],
+
+    video: {
+      provider: "google-drive",
+      url: "https://drive.google.com/file/d/1W8gWQSA2msP_javTCAKIAnkD-XcqeL8T/view?usp=drive_link",
+      title: "Dell Electronics Manufacturing VR Training",
     },
-    {
-      label: "Explore the Smart Lab",
-      description:
-        "The user explores the physical laboratory while discovering digitally enhanced machines and equipment."
-    },
-    {
-      label: "Identify Machines",
-      description:
-        "AR markers and spatial tracking are used to identify relevant machines and display interactive digital content."
-    },
-    {
-      label: "View Machine Information",
-      description:
-        "The user selects a machine to access its digital information, features, and operational details."
-    },
-    {
-      label: "Navigate the Lab",
-      description:
-        "Interactive AR navigation helps users locate different machines and areas within the smart manufacturing laboratory."
-    },
-    {
-      label: "View Live Data",
-      description:
-        "Where available, real-time IIoT information is visualized through the AR interface."
-    }
-  ],
 
-  userJourney: [
-    "Launch the SmartLab XR application.",
-    "Scan and initialize the physical environment.",
-    "Explore the smart manufacturing laboratory.",
-    "Identify machines through AR.",
-    "Select a machine to reveal its digital information.",
-    "Follow AR navigation to locate other machines or areas.",
-    "Interact with available digital machine content.",
-    "View real-time machine or IIoT information where supported."
-  ],
+    gallery: [],
 
-  features: [
-    "Interactive AR machine visualization",
-    "Machine information overlays",
-    "AR-based indoor navigation",
-    "Spatially aligned digital content",
-    "Interactive 3D machine representations",
-    "IIoT data visualization",
-    "Physical-to-digital machine interaction",
-    "Smart manufacturing laboratory exploration"
-  ],
+    status: "seeded",
+  },
 
-  role:
-    "XR Developer responsible for developing the AR experience, integrating spatial tracking and interactive machine content, implementing the user interaction flow, and connecting the application with supporting data systems.",
 
-  contribution:
-    "Contributed to the development of the SmartLab XR experience in Unity, including AR tracking and spatial positioning, interactive machine information, indoor navigation, digital content placement, and integration of Firebase and IIoT-related data. Worked on transforming the physical smart manufacturing laboratory into an interactive AR learning environment.",
+  {
+    slug: "lumax-dharuhera-vr-training",
 
-  challenges: [
-    "Accurately aligning digital content with physical machines and laboratory infrastructure.",
-    "Creating a reliable spatial experience across a large indoor laboratory environment.",
-    "Making machine information accessible without interrupting the user's physical exploration.",
-    "Connecting AR interactions with real-time industrial data.",
-    "Designing an intuitive navigation system for a complex smart manufacturing environment."
-  ],
+    title: "Lumax Dharuhera VR Training",
 
-  solutions: [
-    "Implemented AR tracking and spatial positioning to anchor digital content to the physical environment.",
-    "Used LiDAR-based spatial understanding to improve environment-based positioning on supported devices.",
-    "Designed contextual AR interfaces that present information directly around the corresponding physical machine.",
-    "Integrated Firebase for application data and content management.",
-    "Connected AR visualization with IIoT information to demonstrate real-time smart manufacturing data.",
-    "Designed AR navigation elements to guide users through different areas of the laboratory."
-  ],
+    discipline: "XR",
 
-  results: [
-    "Created an interactive AR experience for exploring a smart manufacturing laboratory.",
-    "Demonstrated the integration of AR with Industry 4.0 and IIoT concepts.",
-    "Enabled users to access machine information directly within the physical lab environment.",
-    "Combined spatial computing, digital content, navigation, and industrial data into a unified XR experience.",
-    "Selected as a finalist for the XRCC competition and presented the project internationally in Berlin."
-  ],
+    category: "VR",
 
-  video: {
-  provider: "google-drive",
-  url: "https://drive.google.com/file/d/1ifQ_m71NwJNZObGrGGjaMld30p2sxNmI/view?usp=sharing",
-},
+    client: "Lumax Dharuhera",
 
-  gallery: [
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/AssemblyLineDemo.png",
-      alt: "Mixed reality overlay of a holographic digital twin aligned over a real assembly line station",
-      caption: "Assembly line digital twin",
+    year: "2025",
+
+    technologies: [
+      "Unity",
+      "C#",
+      "Meta Quest",
+      "XR Interaction",
+      "VR Interaction",
+      "Web Application",
+      "REST API",
+      "Figma",
+    ],
+
+    shortDescription:
+      "An immersive VR-based assembly line training system integrated with a web application, designed to train, guide, and evaluate operators through a realistic virtual manufacturing environment.",
+
+    detailedDescription:
+      "Lumax Dharuhera VR Training is an immersive virtual reality training solution developed to simulate an industrial assembly workstation and provide trainees with a safe, interactive, and repeatable learning environment. The application follows a structured workflow beginning with Authentication and Language Selection, followed by Awareness, Hardware Introduction, Assembly Line Simulation, Training, and Evaluation. Trainees can first understand the workstation and observe the assembly process, then perform the process through guided instructions, and finally complete the assembly independently for performance assessment. The VR experience is integrated with a web application that enables training information, trainee progress, and performance data to be accessed and reviewed through a centralized interface. The application supports two languages, allowing training content and instructions to be presented according to the user's selected language.",
+
+    objective:
+      "The primary objective of the project is to provide an immersive and structured VR-based assembly line training system that allows trainees to understand the workstation, learn SOP-based procedures, practice assembly operations, and independently demonstrate their skills. The solution also integrates a web application to support centralized access to training information, trainee progress, and performance assessment data.",
+
+    problem:
+      "Traditional assembly line training requires access to physical workstations, tools, components, and continuous trainer supervision. Repeated training can also require production resources and may not provide the same learning experience to every trainee. There is also a need to evaluate whether trainees can correctly perform the required operations after completing their training. The project addresses these challenges by recreating the assembly workstation and workflow in a virtual environment, allowing trainees to practice repeatedly while following the defined SOP. The integrated web application provides an additional layer for managing training information and reviewing trainee performance.",
+
+    flow: [
+      {
+        label: "Authentication",
+        description:
+          "Users authenticate themselves before accessing the training application.",
+      },
+      {
+        label: "Language Selection",
+        description:
+          "Users select their preferred language for instructions, UI, and training content.",
+      },
+      {
+        label: "Awareness",
+        description:
+          "Introduces trainees to the overall workstation, assembly process, and training environment.",
+      },
+      {
+        label: "Hardware Introduction",
+        description:
+          "Allows trainees to explore and understand the tools, components, fixtures, and equipment used at the workstation.",
+      },
+      {
+        label: "Assembly Line Simulation",
+        description:
+          "Provides a virtual demonstration of the assembly process and the required standard operating procedure.",
+      },
+      {
+        label: "Training",
+        description:
+          "Provides guided practice of the assembly process through interactive VR tasks.",
+      },
+      {
+        label: "Step-by-Step Guided Assembly",
+        description:
+          "Guides trainees through individual assembly operations using instructions, interactions, and contextual feedback.",
+      },
+      {
+        label: "Evaluation",
+        description:
+          "Allows trainees to perform the assembly process after completing the guided training.",
+      },
+      {
+        label: "Independent Task Execution",
+        description:
+          "Trainees independently perform the required operations without continuous step-by-step guidance.",
+      },
+      {
+        label: "Performance Assessment",
+        description:
+          "Records and evaluates trainee performance based on predefined task and SOP requirements.",
+      },
+      {
+        label: "VR-Integrated Web Application",
+        description:
+          "Provides a web-based interface for accessing trainee information, training progress, and performance data.",
+      },
+    ],
+
+    userJourney: [
+      "Authenticate and access the training application.",
+      "Select the preferred training language.",
+      "Enter the VR training environment.",
+      "Explore and understand the workstation and its components.",
+      "Learn about the tools, fixtures, and equipment used in the workstation.",
+      "Observe the assembly line simulation to understand the complete workflow and SOP.",
+      "Start the guided training module.",
+      "Follow step-by-step instructions to perform each assembly operation.",
+      "Interact with tools, components, fixtures, and equipment using VR interactions.",
+      "Complete the guided training sequence.",
+      "Enter the evaluation module.",
+      "Perform the complete assembly process independently.",
+      "Use the hint system when assistance is required.",
+      "Complete the evaluation process.",
+      "Generate and record trainee performance data.",
+      "Access training and evaluation information through the integrated web application.",
+      "Supervisors can review trainee progress and performance through the web-based interface.",
+    ],
+
+    features: [
+      "Immersive VR assembly line training",
+      "Authentication and user access",
+      "Two-language support",
+      "Awareness module",
+      "Interactive hardware introduction",
+      "Assembly line simulation",
+      "Step-by-step guided training",
+      "Interactive tool and component handling",
+      "SOP-based task execution",
+      "Independent evaluation mode",
+      "Hint and guidance system",
+      "Task validation",
+      "Performance assessment",
+      "Trainee progress tracking",
+      "VR-integrated web application",
+      "Web-based training and evaluation data",
+      "Supervisor performance monitoring",
+    ],
+
+    role: "XR Developer responsible for designing and developing the immersive VR training experience, implementing the training workflow, building interactive systems, integrating VR hardware, and connecting the VR training experience with the web-based application.",
+
+    contribution:
+      "Designed and developed the VR training workflow in Unity, implemented interactive component and tool handling, developed the Awareness, Training, and Evaluation modules, created step-based training logic, implemented task validation and guidance systems, integrated VR interactions using the Meta XR SDK, implemented multilingual training support, and contributed to the integration between the VR application and the web-based system for trainee management, progress tracking, and performance evaluation.",
+
+    challenges: [
+      "Creating realistic and intuitive interactions for industrial tools and components.",
+      "Recreating the physical assembly workflow accurately in a virtual environment.",
+      "Ensuring trainees follow the correct SOP and sequence of operations.",
+      "Designing a guided training experience while keeping the evaluation independent.",
+      "Validating trainee actions across multiple assembly steps.",
+      "Providing clear instructions and feedback without interrupting the immersive experience.",
+      "Supporting multiple languages across the training workflow.",
+      "Synchronizing relevant training and performance information between the VR application and web application.",
+    ],
+
+    solutions: [
+      "Implemented interactive VR objects and workstation components to recreate the physical training environment.",
+      "Developed a step-based training architecture to control the sequence of assembly operations.",
+      "Implemented interaction validation to detect whether trainees perform required actions correctly.",
+      "Added contextual instructions, visual guidance, and hints to assist trainees during the training phase.",
+      "Separated guided Training and independent Evaluation modes to distinguish learning from performance assessment.",
+      "Implemented multilingual content support so users can select their preferred training language.",
+      "Integrated the VR application with a web-based system to provide centralized access to trainee information, training progress, and evaluation data.",
+    ],
+
+    results: [
+      "Created a repeatable VR-based assembly line training environment.",
+      "Enabled trainees to familiarize themselves with the workstation before physical training.",
+      "Provided a structured workflow from awareness to guided training and independent evaluation.",
+      "Enabled trainees to practice assembly operations in a controlled virtual environment.",
+      "Provided consistent SOP-based training through an interactive VR experience.",
+      "Enabled multilingual access to the training experience.",
+      "Connected the VR training experience with a web application for centralized training and performance information.",
+      "Provided a foundation for supervisors to monitor trainee progress and review evaluation results.",
+    ],
+
+    video: {
+      provider: "google-drive",
+      url: "https://drive.google.com/file/d/1W8gWQSA2msP_javTCAKIAnkD-XcqeL8T/view?usp=drive_link",
+      title: "Lumax Dharuhera VR Training",
     },
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/AiraRobotCobotInteraction.png",
-      alt: "Aira, a virtual robot assistant, standing beside a holographic cobot arm with P1 and P2 position markers on a real lab table",
-      caption: "Aira guiding cobot interaction",
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/AiraRobotIntructor.png",
-      alt: "Aira, the virtual robot instructor, floating in mixed reality next to a lab workstation",
-      caption: "Aira, the virtual instructor",
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/MR-AreaScan1.png",
-      alt: "Top-down view in Unity of the scanned lab space used to place mixed reality content",
-      caption: "MR area scan, top view",
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/MR-AreaScan2.png",
-      alt: "Perspective view of the scanned lab mesh in Unity with workstations and walls captured",
-      caption: "MR area scan mesh",
-    },
-    {
-      type: "image",
-      src: "/ProjectsImage/SmartLabXR/xrcc%20flow.jpg",
-      alt: "Flow diagram of the SmartLab XR application showing each stage of the experience",
-      caption: "Application flow",
-    },
-  ],
 
-  status: "seeded"
-},
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Env1.png",
+        alt: "Virtual factory floor with a marked assembly area, tool station, material storage racks and quality inspection desk",
+        caption: "Assembly area environment",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Env2.png",
+        alt: "Top-down cutaway view of the full virtual factory building showing the training zones and assembly area layout",
+        caption: "Factory layout overview",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity1.png",
+        alt: "Unity scene view of the training start point facing the assembly workstation, with an info kiosk and a glowing teleport marker",
+        caption: "Training start point in Unity",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity2.png",
+        alt: "Unity scene view of the assembly workstation inside a hazard-striped zone, with part tables and a Start Training floor marker",
+        caption: "Assembly workstation in Unity",
+      },
+    ],
+
+    status: "seeded",
+  },
+
+  {
+    slug: "smartlab-xr",
+
+    title: "SmartLab XR",
+
+    discipline: "XR",
+
+    category: "MR",
+
+    client: null,
+
+    year: "2026",
+
+    technologies: [
+      "Unity",
+      "Multiset.AI",
+      "Meta All in One SDK",
+      "Blender",
+      "LiDAR",
+      "Figma",
+    ],
+
+    shortDescription:
+      "An immersive AR smart-lab experience that connects physical manufacturing equipment with interactive digital information, indoor navigation, and real-time machine data.",
+
+    detailedDescription:
+      "SmartLab XR is an augmented reality experience designed to transform a physical smart manufacturing laboratory into an interactive digital learning environment. The application allows users to explore industrial machines through spatially aligned AR content, access machine information, navigate through the laboratory, and visualize real-time industrial data. By combining spatial tracking, interactive 3D content, and IIoT integration, the experience creates a bridge between physical manufacturing infrastructure and digital learning.",
+
+    objective:
+      "The objective was to create an intuitive AR layer over the smart manufacturing laboratory so that users could easily discover machines, understand their functions, access contextual information, and interact with digital representations of the lab infrastructure. The experience was designed to demonstrate how AR can improve industrial learning, machine awareness, and interaction within an Industry 4.0 environment.",
+
+    problem:
+      "Smart manufacturing laboratories contain a large number of machines, systems, and technologies that can be difficult for new users to understand and navigate. Conventional displays and static information provide limited context and require users to move between physical equipment and separate information sources. There was a need for a more immersive way to connect machine information directly with the physical equipment in the laboratory.",
+
+    flow: [
+      {
+        label: "Scan & Initialize",
+        description:
+          "The user launches the experience and scans the designated environment or target to establish the AR experience.",
+      },
+      {
+        label: "Explore the Smart Lab",
+        description:
+          "The user explores the physical laboratory while discovering digitally enhanced machines and equipment.",
+      },
+      {
+        label: "Identify Machines",
+        description:
+          "AR markers and spatial tracking are used to identify relevant machines and display interactive digital content.",
+      },
+      {
+        label: "View Machine Information",
+        description:
+          "The user selects a machine to access its digital information, features, and operational details.",
+      },
+      {
+        label: "Navigate the Lab",
+        description:
+          "Interactive AR navigation helps users locate different machines and areas within the smart manufacturing laboratory.",
+      },
+      {
+        label: "View Live Data",
+        description:
+          "Where available, real-time IIoT information is visualized through the AR interface.",
+      },
+    ],
+
+    userJourney: [
+      "Launch the SmartLab XR application.",
+      "Scan and initialize the physical environment.",
+      "Explore the smart manufacturing laboratory.",
+      "Identify machines through AR.",
+      "Select a machine to reveal its digital information.",
+      "Follow AR navigation to locate other machines or areas.",
+      "Interact with available digital machine content.",
+      "View real-time machine or IIoT information where supported.",
+    ],
+
+    features: [
+      "Interactive AR machine visualization",
+      "Machine information overlays",
+      "AR-based indoor navigation",
+      "Spatially aligned digital content",
+      "Interactive 3D machine representations",
+      "IIoT data visualization",
+      "Physical-to-digital machine interaction",
+      "Smart manufacturing laboratory exploration",
+    ],
+
+    role: "XR Developer responsible for developing the AR experience, integrating spatial tracking and interactive machine content, implementing the user interaction flow, and connecting the application with supporting data systems.",
+
+    contribution:
+      "Contributed to the development of the SmartLab XR experience in Unity, including AR tracking and spatial positioning, interactive machine information, indoor navigation, digital content placement, and integration of Firebase and IIoT-related data. Worked on transforming the physical smart manufacturing laboratory into an interactive AR learning environment.",
+
+    challenges: [
+      "Accurately aligning digital content with physical machines and laboratory infrastructure.",
+      "Creating a reliable spatial experience across a large indoor laboratory environment.",
+      "Making machine information accessible without interrupting the user's physical exploration.",
+      "Connecting AR interactions with real-time industrial data.",
+      "Designing an intuitive navigation system for a complex smart manufacturing environment.",
+    ],
+
+    solutions: [
+      "Implemented AR tracking and spatial positioning to anchor digital content to the physical environment.",
+      "Used LiDAR-based spatial understanding to improve environment-based positioning on supported devices.",
+      "Designed contextual AR interfaces that present information directly around the corresponding physical machine.",
+      "Integrated Firebase for application data and content management.",
+      "Connected AR visualization with IIoT information to demonstrate real-time smart manufacturing data.",
+      "Designed AR navigation elements to guide users through different areas of the laboratory.",
+    ],
+
+    results: [
+      "Created an interactive AR experience for exploring a smart manufacturing laboratory.",
+      "Demonstrated the integration of AR with Industry 4.0 and IIoT concepts.",
+      "Enabled users to access machine information directly within the physical lab environment.",
+      "Combined spatial computing, digital content, navigation, and industrial data into a unified XR experience.",
+      "Selected as a finalist for the XRCC competition and presented the project internationally in Berlin.",
+    ],
+
+    video: {
+      provider: "google-drive",
+      url: "https://drive.google.com/file/d/1ifQ_m71NwJNZObGrGGjaMld30p2sxNmI/view?usp=sharing",
+    },
+
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/AssemblyLineDemo.png",
+        alt: "Mixed reality overlay of a holographic digital twin aligned over a real assembly line station",
+        caption: "Assembly line digital twin",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/AiraRobotCobotInteraction.png",
+        alt: "Aira, a virtual robot assistant, standing beside a holographic cobot arm with P1 and P2 position markers on a real lab table",
+        caption: "Aira guiding cobot interaction",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/AiraRobotIntructor.png",
+        alt: "Aira, the virtual robot instructor, floating in mixed reality next to a lab workstation",
+        caption: "Aira, the virtual instructor",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/MR-AreaScan1.png",
+        alt: "Top-down view in Unity of the scanned lab space used to place mixed reality content",
+        caption: "MR area scan, top view",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/MR-AreaScan2.png",
+        alt: "Perspective view of the scanned lab mesh in Unity with workstations and walls captured",
+        caption: "MR area scan mesh",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/SmartLabXR/xrcc%20flow.jpg",
+        alt: "Flow diagram of the SmartLab XR application showing each stage of the experience",
+        caption: "Application flow",
+      },
+    ],
+
+    status: "seeded",
+  },
   {
     slug: "fsm-smart-intro",
     title: "FSM Smart Intro",
@@ -383,12 +587,7 @@ export const projects: Project[] = [
     category: "AR",
     client: "IIT Delhi AIA Foundation for Smart Manufacturing",
     year: null,
-    technologies: [
-      "Unity",
-      "Vuforia Engine",
-      "Area Target",
-      "IIoT",
-    ],
+    technologies: ["Unity", "Vuforia Engine", "Area Target", "IIoT"],
     shortDescription:
       "AR-based smart laboratory introduction that overlays machine information, guided navigation, and real-time industrial data onto the physical lab environment.",
     detailedDescription:
@@ -401,33 +600,33 @@ export const projects: Project[] = [
       {
         label: "Launch & Area Recognition",
         description:
-          "The user launches the application and points the device toward the laboratory to initialize the Vuforia Area Target experience."
+          "The user launches the application and points the device toward the laboratory to initialize the Vuforia Area Target experience.",
       },
       {
         label: "Explore the Laboratory",
         description:
-          "Digital content appears spatially aligned with the physical laboratory and its equipment."
+          "Digital content appears spatially aligned with the physical laboratory and its equipment.",
       },
       {
         label: "Select a Machine",
         description:
-          "The user selects a machine to access its information and relevant digital content."
+          "The user selects a machine to access its information and relevant digital content.",
       },
       {
         label: "View Machine Data",
         description:
-          "Available real-time machine or IIoT information is presented through the AR interface."
+          "Available real-time machine or IIoT information is presented through the AR interface.",
       },
       {
         label: "Start Demo",
         description:
-          "The user starts the guided demonstration, which directs them toward the relevant machines in sequence."
+          "The user starts the guided demonstration, which directs them toward the relevant machines in sequence.",
       },
       {
         label: "Interact with the Smart Lab",
         description:
-          "Where supported, the user can interact with connected laboratory appliances through the AR interface."
-      }
+          "Where supported, the user can interact with connected laboratory appliances through the AR interface.",
+      },
     ],
     userJourney: [
       "Launch the FSM Smart Intro application.",
@@ -437,7 +636,7 @@ export const projects: Project[] = [
       "View available real-time machine data.",
       "Select Start Demo to begin the guided laboratory walkthrough.",
       "Follow the guidance to visit machines in sequence.",
-      "Interact with supported smart laboratory appliances through the application."
+      "Interact with supported smart laboratory appliances through the application.",
     ],
     features: [
       "Vuforia Area Target tracking",
@@ -448,10 +647,9 @@ export const projects: Project[] = [
       "Sequential machine demonstration",
       "Interactive 3D content",
       "IIoT-connected experience",
-      "Physical-to-digital machine interaction"
+      "Physical-to-digital machine interaction",
     ],
-    role:
-      "XR Developer responsible for developing the AR experience, implementing spatial tracking and machine interactions, building the guided demonstration flow, and integrating digital content with the physical smart manufacturing laboratory.",
+    role: "XR Developer responsible for developing the AR experience, implementing spatial tracking and machine interactions, building the guided demonstration flow, and integrating digital content with the physical smart manufacturing laboratory.",
     contribution:
       "Developed the AR laboratory introduction experience in Unity using Vuforia Engine Area Target tracking. Implemented spatially aligned machine content, interactive information interfaces, guided navigation, machine demonstration flow, and integration of real-time industrial data and IIoT-connected functionality.",
     challenges: [
@@ -459,25 +657,25 @@ export const projects: Project[] = [
       "Creating a reliable AR experience across a large indoor laboratory environment.",
       "Presenting machine information without obstructing the user's view of the physical equipment.",
       "Creating a guided experience that is easy for first-time users to follow.",
-      "Connecting the AR interface with available real-time industrial data."
+      "Connecting the AR interface with available real-time industrial data.",
     ],
     solutions: [
       "Used Vuforia Engine Area Target tracking to establish the AR experience within the laboratory.",
       "Created spatially aligned digital interfaces around the corresponding physical machines.",
       "Designed contextual machine information panels to connect digital information with physical equipment.",
       "Implemented a Start Demo flow to guide users through machines in a defined sequence.",
-      "Integrated available IIoT data to demonstrate real-time machine information through AR."
+      "Integrated available IIoT data to demonstrate real-time machine information through AR.",
     ],
     results: [
       "Created an interactive AR introduction to the smart manufacturing laboratory.",
       "Enabled users to access machine information directly in the physical lab environment.",
       "Provided guided exploration of laboratory machines and equipment.",
       "Demonstrated the connection between AR, IIoT, and smart manufacturing systems.",
-      "Created a digital interface for introducing users to the laboratory's Industry 4.0 infrastructure."
+      "Created a digital interface for introducing users to the laboratory's Industry 4.0 infrastructure.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1FWm1x66TX93-3IvV8f3oWcvLtXB5Guhu/view?usp=drive_link"
+      url: "https://drive.google.com/file/d/1FWm1x66TX93-3IvV8f3oWcvLtXB5Guhu/view?usp=drive_link",
     },
     gallery: [
       {
@@ -514,12 +712,7 @@ export const projects: Project[] = [
     category: "VR",
     client: "IIT Delhi AIA Foundation for Smart Manufacturing",
     year: "2024",
-    technologies: [
-      "Unity",
-      "Meta Quest",
-      "XR Interaction Toolkit",
-      "Blender",
-    ],
+    technologies: ["Unity", "Meta Quest", "XR Interaction Toolkit", "Blender"],
     shortDescription:
       "Immersive VR tour of the FSM smart manufacturing facilities with interactive machine touchpoints and Industry 4.0 demonstrations.",
     detailedDescription:
@@ -532,33 +725,33 @@ export const projects: Project[] = [
       {
         label: "Enter the Virtual Facility",
         description:
-          "The user enters the recreated FSM facility in an immersive VR environment."
+          "The user enters the recreated FSM facility in an immersive VR environment.",
       },
       {
         label: "Explore CPL",
         description:
-          "The user explores the Cyber Physical Lab and its research and development environment."
+          "The user explores the Cyber Physical Lab and its research and development environment.",
       },
       {
         label: "Explore CPTF",
         description:
-          "The user visits the Cyber Physical Training Facility and explores its training infrastructure."
+          "The user visits the Cyber Physical Training Facility and explores its training infrastructure.",
       },
       {
         label: "Explore CPF",
         description:
-          "The user explores the Cyber Physical Factory and its manufacturing equipment."
+          "The user explores the Cyber Physical Factory and its manufacturing equipment.",
       },
       {
         label: "Machine Information",
         description:
-          "Interactive touchpoints provide information about machines, workstations, and technologies."
+          "Interactive touchpoints provide information about machines, workstations, and technologies.",
       },
       {
         label: "Industry 4.0 Demonstrations",
         description:
-          "Selected machines and systems can be demonstrated through interactive virtual simulations."
-      }
+          "Selected machines and systems can be demonstrated through interactive virtual simulations.",
+      },
     ],
     userJourney: [
       "Put on the VR headset and enter the FSM Virtual Tour.",
@@ -569,7 +762,7 @@ export const projects: Project[] = [
       "Approach machines and workstations to activate interactive touchpoints.",
       "Read machine and technology information.",
       "Launch available virtual demonstrations or simulations.",
-      "Explore the facility and understand its Industry 4.0 capabilities."
+      "Explore the facility and understand its Industry 4.0 capabilities.",
     ],
     features: [
       "Immersive VR facility tour",
@@ -580,34 +773,33 @@ export const projects: Project[] = [
       "Machine and workstation information",
       "Industry 4.0 technology demonstrations",
       "Virtual process simulations",
-      "Remote facility exploration"
+      "Remote facility exploration",
     ],
-    role:
-      "XR Developer responsible for developing the immersive VR tour, recreating the FSM facility, implementing interactive touchpoints, and integrating machine information and virtual demonstrations.",
+    role: "XR Developer responsible for developing the immersive VR tour, recreating the FSM facility, implementing interactive touchpoints, and integrating machine information and virtual demonstrations.",
     contribution:
       "Developed the FSM facility in Unity as an immersive VR environment, including the CPL, CPTF, and CPF sections. Implemented interactive touchpoints for machine information and contributed to virtual simulations that demonstrate operational workflows and Industry 4.0 technologies.",
     challenges: [
       "Recreating a large physical laboratory and manufacturing facility as a navigable VR environment.",
       "Maintaining spatial clarity while presenting a large amount of machine and facility information.",
       "Making machine touchpoints discoverable and intuitive for first-time VR users.",
-      "Representing industrial workflows in a way that is understandable within a virtual tour."
+      "Representing industrial workflows in a way that is understandable within a virtual tour.",
     ],
     solutions: [
       "Recreated the facility as a structured VR environment divided into CPL, CPTF, and CPF sections.",
       "Used interactive touchpoints to connect physical-equipment representations with digital information.",
       "Organized machine information contextually around the relevant workstations.",
-      "Integrated virtual demonstrations to explain selected machine operations and Industry 4.0 workflows."
+      "Integrated virtual demonstrations to explain selected machine operations and Industry 4.0 workflows.",
     ],
     results: [
       "Created an immersive virtual representation of the FSM smart manufacturing facilities.",
       "Enabled remote exploration of CPL, CPTF, and CPF environments.",
       "Provided interactive access to machine and workstation information.",
       "Demonstrated selected Industry 4.0 technologies and operational workflows in VR.",
-      "Provided a reusable digital environment for facility introduction and technology demonstration."
+      "Provided a reusable digital environment for facility introduction and technology demonstration.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1zHsdsE5z5C7rwn2QPcTmh0Tqp1YPV6Xa/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1zHsdsE5z5C7rwn2QPcTmh0Tqp1YPV6Xa/view?usp=sharing",
     },
     gallery: [
       {
@@ -770,7 +962,13 @@ export const projects: Project[] = [
     category: "VR",
     client: null,
     year: null,
-    technologies: ["Unity", "XR Interaction Toolkit", "Meta Quest", "Blender", "Figma"],
+    technologies: [
+      "Unity",
+      "XR Interaction Toolkit",
+      "Meta Quest",
+      "Blender",
+      "Figma",
+    ],
     shortDescription:
       "An immersive VR training application for learning and experiencing a robotic welding cell through hardware familiarization, guided startup procedures, and welding simulation.",
     detailedDescription:
@@ -783,18 +981,18 @@ export const projects: Project[] = [
       {
         label: "Hardware Introduction",
         description:
-          "Introduces the user to the components of the robotic welding cell and helps them understand the purpose of the individual hardware elements."
+          "Introduces the user to the components of the robotic welding cell and helps them understand the purpose of the individual hardware elements.",
       },
       {
         label: "Startup Sequence",
         description:
-          "Guides the user through the correct startup procedure and the sequence of actions required to bring the robotic welding cell into operation."
+          "Guides the user through the correct startup procedure and the sequence of actions required to bring the robotic welding cell into operation.",
       },
       {
         label: "Simulation",
         description:
-          "Provides an immersive simulation of the robotic welding process, allowing the user to observe the operation from a close and safe perspective."
-      }
+          "Provides an immersive simulation of the robotic welding process, allowing the user to observe the operation from a close and safe perspective.",
+      },
     ],
     userJourney: [
       "Enter the virtual robotic welding cell.",
@@ -803,7 +1001,7 @@ export const projects: Project[] = [
       "Start the guided startup sequence.",
       "Follow the required operational steps in the correct order.",
       "Enter the welding simulation.",
-      "Observe the robotic welding process from an immersive perspective."
+      "Observe the robotic welding process from an immersive perspective.",
     ],
     features: [
       "Interactive robotic welding cell environment",
@@ -813,34 +1011,33 @@ export const projects: Project[] = [
       "Step-by-step operational guidance",
       "Robotic welding process simulation",
       "Close-range observation of welding operation",
-      "Immersive industrial training environment"
+      "Immersive industrial training environment",
     ],
-    role:
-      "XR Developer responsible for developing the VR training experience, interactive hardware learning, guided startup workflow, and robotic welding simulation.",
+    role: "XR Developer responsible for developing the VR training experience, interactive hardware learning, guided startup workflow, and robotic welding simulation.",
     contribution:
       "Developed the interactive VR environment and learning flow across the three modules. Worked on hardware interactions and component identification, implemented the guided startup sequence, and developed the simulation workflow for demonstrating the robotic welding operation.",
     challenges: [
       "Representing complex robotic welding-cell equipment in an understandable training environment.",
       "Converting the real startup procedure into an interactive VR sequence.",
       "Providing a safe way to observe an active welding process at close range.",
-      "Making the experience training-oriented rather than only a visual replica of the equipment."
+      "Making the experience training-oriented rather than only a visual replica of the equipment.",
     ],
     solutions: [
       "Structured the application into progressive Hardware Introduction, Startup Sequence, and Simulation modules.",
       "Used interactive component information to build hardware familiarity before operation.",
       "Converted the operational procedure into a guided sequence with step-based interactions.",
-      "Created an immersive welding simulation that allows safe close-range observation."
+      "Created an immersive welding simulation that allows safe close-range observation.",
     ],
     results: [
       "Created an immersive VR-based robotic welding training environment.",
       "Enabled users to understand welding-cell hardware before operation.",
       "Provided a guided startup procedure in a controlled virtual environment.",
       "Enabled safe observation of the robotic welding process through simulation.",
-      "Established the foundation for subsequent industrial VR training applications."
+      "Established the foundation for subsequent industrial VR training applications.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1a-hrcBdxPS0_5iZm-ouIdmKqp3_G_Twy/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1a-hrcBdxPS0_5iZm-ouIdmKqp3_G_Twy/view?usp=sharing",
     },
     gallery: [
       {
@@ -898,7 +1095,7 @@ export const projects: Project[] = [
         caption: "Robots and conveyor",
       },
     ],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "pneumatic-trainer-vr",
@@ -907,7 +1104,13 @@ export const projects: Project[] = [
     category: "VR",
     client: null,
     year: null,
-    technologies: ["Unity", "Meta All in One SDK", "Quest 3", "Blender", "Figma"],
+    technologies: [
+      "Unity",
+      "Meta All in One SDK",
+      "Quest 3",
+      "Blender",
+      "Figma",
+    ],
     shortDescription:
       "An interactive VR pneumatic training system for building, connecting, and operating pneumatic circuits with virtual components and pressure visualization.",
     detailedDescription:
@@ -920,28 +1123,28 @@ export const projects: Project[] = [
       {
         label: "Component Introduction",
         description:
-          "Introduces the pneumatic components available in the virtual trainer."
+          "Introduces the pneumatic components available in the virtual trainer.",
       },
       {
         label: "Circuit Assembly",
         description:
-          "Users place components and create pneumatic connections between ports to construct a circuit."
+          "Users place components and create pneumatic connections between ports to construct a circuit.",
       },
       {
         label: "Pressurize",
         description:
-          "Users activate the pressure source and observe pressure within the connected circuit."
+          "Users activate the pressure source and observe pressure within the connected circuit.",
       },
       {
         label: "Operate & Observe",
         description:
-          "Users operate valves and controls and observe cylinder movement and pneumatic behavior."
+          "Users operate valves and controls and observe cylinder movement and pneumatic behavior.",
       },
       {
         label: "Experiment",
         description:
-          "Users can modify the circuit and observe how changes affect the system."
-      }
+          "Users can modify the circuit and observe how changes affect the system.",
+      },
     ],
     userJourney: [
       "Enter the virtual pneumatic training environment.",
@@ -953,7 +1156,7 @@ export const projects: Project[] = [
       "Operate valves or switches.",
       "Observe pressure and airflow visualization.",
       "Observe Single-Acting or Double-Acting Cylinder movement.",
-      "Modify the circuit and experiment with different configurations."
+      "Modify the circuit and experiment with different configurations.",
     ],
     features: [
       "Interactive VR pneumatic trainer",
@@ -968,34 +1171,33 @@ export const projects: Project[] = [
       "One-Way Flow Control Valve",
       "Manometer / pressure gauge",
       "Electro-Pneumatic training concepts",
-      "Interactive circuit experimentation"
+      "Interactive circuit experimentation",
     ],
-    role:
-      "XR Developer responsible for developing the VR interaction systems, pneumatic circuit logic, component behavior, connection visualization, and training experience.",
+    role: "XR Developer responsible for developing the VR interaction systems, pneumatic circuit logic, component behavior, connection visualization, and training experience.",
     contribution:
       "Developed the interactive pneumatic trainer environment, including component interaction, grab and placement systems, pneumatic port connections, virtual pipe visualization, pneumatic network management, pressure visualization, valve interactions, and cylinder behavior.",
     challenges: [
       "Creating flexible virtual pneumatic connections that users can dynamically create and modify.",
       "Representing pneumatic relationships between pressure sources, valves, flow-control components, and actuators.",
       "Making invisible pressure and airflow understandable through visual feedback.",
-      "Maintaining natural VR interaction while enforcing pneumatic circuit logic."
+      "Maintaining natural VR interaction while enforcing pneumatic circuit logic.",
     ],
     solutions: [
       "Implemented a component and port-based connection system for dynamic circuit construction.",
       "Developed a pneumatic network architecture where components act as nodes and connections define the circuit topology.",
       "Added pressure-based visualization to communicate pneumatic state.",
-      "Connected VR interactions with the underlying pneumatic logic so user actions directly affect the simulated system."
+      "Connected VR interactions with the underlying pneumatic logic so user actions directly affect the simulated system.",
     ],
     results: [
       "Created an interactive VR environment for pneumatic-system learning.",
       "Enabled users to construct and experiment with pneumatic circuits.",
       "Supported Single-Acting, Double-Acting, and Electro-Pneumatic concepts.",
       "Provided visual feedback for pressure and actuator behavior.",
-      "Demonstrated hands-on industrial training without requiring physical pneumatic trainer hardware."
+      "Demonstrated hands-on industrial training without requiring physical pneumatic trainer hardware.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1NwlqeXeZWvWPupE7lc1wvNcMnXzsXvzY/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1NwlqeXeZWvWPupE7lc1wvNcMnXzsXvzY/view?usp=sharing",
     },
     gallery: [
       {
@@ -1035,7 +1237,7 @@ export const projects: Project[] = [
         caption: "Pneumatic components",
       },
     ],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "ar-maintenance",
@@ -1044,7 +1246,13 @@ export const projects: Project[] = [
     category: "AR",
     client: null,
     year: null,
-    technologies: ["Unity", "Vuforia Engine", "Model Target", "Image Target", "Blender"],
+    technologies: [
+      "Unity",
+      "Vuforia Engine",
+      "Model Target",
+      "Image Target",
+      "Blender",
+    ],
     shortDescription:
       "An AR-based industrial maintenance training experience that guides users from hardware identification and troubleshooting to repair and component replacement.",
     detailedDescription:
@@ -1057,23 +1265,23 @@ export const projects: Project[] = [
       {
         label: "Hardware Introduction",
         description:
-          "Introduces the physical component and helps the user understand its hardware and function."
+          "Introduces the physical component and helps the user understand its hardware and function.",
       },
       {
         label: "Troubleshooting",
         description:
-          "Provides visual AR guidance to inspect the component and identify the source of the issue."
+          "Provides visual AR guidance to inspect the component and identify the source of the issue.",
       },
       {
         label: "Fix",
         description:
-          "Provides step-by-step visual instructions for performing the required corrective action."
+          "Provides step-by-step visual instructions for performing the required corrective action.",
       },
       {
         label: "Replacement",
         description:
-          "If the issue cannot be fixed, guides the user through the component replacement procedure."
-      }
+          "If the issue cannot be fixed, guides the user through the component replacement procedure.",
+      },
     ],
     userJourney: [
       "Launch the AR Maintenance application.",
@@ -1086,7 +1294,7 @@ export const projects: Project[] = [
       "Follow the Fix procedure.",
       "Verify whether the issue has been resolved.",
       "If unresolved, enter the Replacement module.",
-      "Follow the replacement sequence and complete the maintenance workflow."
+      "Follow the replacement sequence and complete the maintenance workflow.",
     ],
     features: [
       "AR-based industrial maintenance training",
@@ -1100,33 +1308,32 @@ export const projects: Project[] = [
       "Vuforia Model Target tracking",
       "Vuforia Image Target tracking",
       "Hybrid tracking strategy",
-      "Contextual visual AR instructions"
+      "Contextual visual AR instructions",
     ],
-    role:
-      "XR Developer responsible for developing the AR maintenance experience, Vuforia tracking implementation, maintenance workflow, visual guidance system, and component-specific maintenance sequences.",
+    role: "XR Developer responsible for developing the AR maintenance experience, Vuforia tracking implementation, maintenance workflow, visual guidance system, and component-specific maintenance sequences.",
     contribution:
       "Developed the Unity AR application, implemented Vuforia Model Targets and Image Targets, designed the hybrid tracking workflow, and developed the Hardware Introduction, Troubleshooting, Fix, and Replacement sequences for the Servo Motor, RFID, and Proximity Sensor.",
     challenges: [
       "Supporting reliable tracking when industrial components are viewed from different orientations.",
       "Converting troubleshooting knowledge into clear sequential AR guidance.",
       "Connecting diagnosis with the appropriate repair workflow.",
-      "Providing a replacement path when the initial repair does not resolve the issue."
+      "Providing a replacement path when the initial repair does not resolve the issue.",
     ],
     solutions: [
       "Used Model Targets when the component was suitably visible from the front.",
       "Used Image Targets as an alternative tracking method when Model Target recognition was not suitable.",
       "Structured maintenance into Hardware Introduction, Troubleshooting, Fix, and Replacement stages.",
-      "Used contextual AR visuals to identify inspection areas and guide physical maintenance actions."
+      "Used contextual AR visuals to identify inspection areas and guide physical maintenance actions.",
     ],
     results: [
       "Created a complete AR-assisted industrial maintenance workflow.",
       "Enabled guided troubleshooting for Servo Motor, RFID, and Proximity Sensor systems.",
       "Provided visual repair guidance and a fallback replacement workflow.",
-      "Demonstrated a hybrid Vuforia tracking approach for different component viewpoints."
+      "Demonstrated a hybrid Vuforia tracking approach for different component viewpoints.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/17CasnIwHFfYcApPBL--eKNZKLztpWECq/view?usp=sharing"
+      url: "https://drive.google.com/file/d/17CasnIwHFfYcApPBL--eKNZKLztpWECq/view?usp=sharing",
     },
     gallery: [
       {
@@ -1166,7 +1373,7 @@ export const projects: Project[] = [
         caption: "RFID maintenance sequence",
       },
     ],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "mr-product-visualization",
@@ -1188,28 +1395,28 @@ export const projects: Project[] = [
       {
         label: "Product Placement",
         description:
-          "The user places the 1:1 scale mechanism within their physical environment."
+          "The user places the 1:1 scale mechanism within their physical environment.",
       },
       {
         label: "Explore & Inspect",
         description:
-          "Users interact with individual components through spatial interactions such as grab, rotate, move, and zoom."
+          "Users interact with individual components through spatial interactions such as grab, rotate, move, and zoom.",
       },
       {
         label: "Understand Components",
         description:
-          "The application provides contextual UI and audio information about individual mechanism components."
+          "The application provides contextual UI and audio information about individual mechanism components.",
       },
       {
         label: "Visualize Working Process",
         description:
-          "An animated process demonstrates how the workpiece moves through the mechanism's stations."
+          "An animated process demonstrates how the workpiece moves through the mechanism's stations.",
       },
       {
         label: "Ask AI",
         description:
-          "The user taps Ask AI, speaks a question, and receives a mechanism-specific answer from the RAG-based assistant."
-      }
+          "The user taps Ask AI, speaks a question, and receives a mechanism-specific answer from the RAG-based assistant.",
+      },
     ],
     userJourney: [
       "Launch the MR application.",
@@ -1221,7 +1428,7 @@ export const projects: Project[] = [
       "Visualize the complete mechanism working process.",
       "Tap Ask AI.",
       "Speak a question about the mechanism.",
-      "Receive an AI-generated answer grounded in the mechanism-kit knowledge base."
+      "Receive an AI-generated answer grounded in the mechanism-kit knowledge base.",
     ],
     features: [
       "Mixed Reality product visualization",
@@ -1235,10 +1442,9 @@ export const projects: Project[] = [
       "Assembly-line process visualization",
       "RAG-based AI assistant",
       "Voice-based question input",
-      "Mechanism-specific AI question answering"
+      "Mechanism-specific AI question answering",
     ],
-    role:
-      "XR Developer responsible for developing the Mixed Reality product visualization experience, spatial interactions, component exploration, process visualization, and integration of the AI-assisted question-and-answer experience.",
+    role: "XR Developer responsible for developing the Mixed Reality product visualization experience, spatial interactions, component exploration, process visualization, and integration of the AI-assisted question-and-answer experience.",
     contribution:
       "Developed the MR experience in Unity, implemented spatial product placement and component interactions, created the mechanism exploration workflow and working-process visualization, and integrated the RAG-based AI assistant with the Ask AI voice interaction.",
     challenges: [
@@ -1246,28 +1452,28 @@ export const projects: Project[] = [
       "Creating natural spatial interactions with the 1:1 product model.",
       "Explaining the complete working process rather than only displaying the product.",
       "Making technical information accessible through conversational interaction.",
-      "Grounding AI answers in mechanism-specific knowledge."
+      "Grounding AI answers in mechanism-specific knowledge.",
     ],
     solutions: [
       "Presented the mechanism at 1:1 scale for spatial understanding.",
       "Implemented component-level grab and manipulation interactions.",
       "Added contextual UI and audio explanations.",
       "Created a working-process animation showing the complete mechanism flow.",
-      "Integrated a RAG-based AI assistant grounded in the mechanism-kit knowledge base."
+      "Integrated a RAG-based AI assistant grounded in the mechanism-kit knowledge base.",
     ],
     results: [
       "Created an interactive MR product-exploration experience.",
       "Enabled users to understand individual mechanism components and the complete process.",
       "Combined spatial product visualization with conversational AI.",
       "Enabled voice-based questions through the Ask AI interface.",
-      "Demonstrated RAG-based technical assistance within an MR experience."
+      "Demonstrated RAG-based technical assistance within an MR experience.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1JYH29jm3K3klHiQ265-louN3U_4bNOGj/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1JYH29jm3K3klHiQ265-louN3U_4bNOGj/view?usp=sharing",
     },
     gallery: [],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "mr-product-logistics",
@@ -1289,38 +1495,38 @@ export const projects: Project[] = [
       {
         label: "Product Entry",
         description:
-          "An incoming product enters the warehouse and the user starts the MR logistics workflow."
+          "An incoming product enters the warehouse and the user starts the MR logistics workflow.",
       },
       {
         label: "Scan QR",
         description:
-          "The user scans the product QR code using the Meta Quest camera."
+          "The user scans the product QR code using the Meta Quest camera.",
       },
       {
         label: "Identify Product",
         description:
-          "The application retrieves product information such as model, quantity, and related details."
+          "The application retrieves product information such as model, quantity, and related details.",
       },
       {
         label: "Visualize Product",
         description:
-          "The application displays a digital representation of the product contained inside the box."
+          "The application displays a digital representation of the product contained inside the box.",
       },
       {
         label: "Find Storage Rack",
         description:
-          "The application identifies the designated rack for the product."
+          "The application identifies the designated rack for the product.",
       },
       {
         label: "Navigate",
         description:
-          "The user follows an MR-guided path to reach the assigned storage location."
+          "The user follows an MR-guided path to reach the assigned storage location.",
       },
       {
         label: "Store Product",
         description:
-          "The user places the product at the designated rack and completes the storage task."
-      }
+          "The user places the product at the designated rack and completes the storage task.",
+      },
     ],
     userJourney: [
       "Receive the incoming product.",
@@ -1332,7 +1538,7 @@ export const projects: Project[] = [
       "Follow the MR-guided path through the warehouse.",
       "Reach the designated rack.",
       "Place the product at the correct storage location.",
-      "Complete the storage workflow."
+      "Complete the storage workflow.",
     ],
     features: [
       "Mixed Reality warehouse experience",
@@ -1346,10 +1552,9 @@ export const projects: Project[] = [
       "Distance and direction guidance",
       "Rack/location visualization",
       "Product placement workflow",
-      "Storage task completion"
+      "Storage task completion",
     ],
-    role:
-      "XR Developer responsible for developing the Mixed Reality logistics experience, QR-based product identification, product visualization, spatial navigation, and warehouse storage workflow.",
+    role: "XR Developer responsible for developing the Mixed Reality logistics experience, QR-based product identification, product visualization, spatial navigation, and warehouse storage workflow.",
     contribution:
       "Developing the MR logistics application in Unity, including the product-entry workflow, Meta Quest camera-based QR scanning, product information interface, 3D product visualization, spatial navigation, rack guidance, and product placement workflow.",
     challenges: [
@@ -1357,24 +1562,24 @@ export const projects: Project[] = [
       "Providing an understandable digital representation of products contained inside packages.",
       "Guiding users through a warehouse to a specific storage rack.",
       "Maintaining reliable spatial relationships between the user, warehouse environment, and destination.",
-      "Validating correct placement at the assigned storage location."
+      "Validating correct placement at the assigned storage location.",
     ],
     solutions: [
       "Use QR codes as the digital identity of incoming physical products.",
       "Display product information and a 3D product representation after scanning.",
       "Use spatial MR navigation to guide users toward the assigned rack.",
-      "Use defined storage positions and spatial cues to support correct product placement."
+      "Use defined storage positions and spatial cues to support correct product placement.",
     ],
     results: [
       "Ongoing development of an MR-assisted warehouse logistics workflow.",
       "Established a QR-to-product-information identification flow.",
       "Integrated 3D product visualization for packaged items.",
       "Developed the concept for MR-guided navigation to storage racks.",
-      "Created a foundation for an end-to-end product receiving and storage experience."
+      "Created a foundation for an end-to-end product receiving and storage experience.",
     ],
     video: { provider: "none" },
     gallery: [],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "vmc-ar",
@@ -1383,7 +1588,13 @@ export const projects: Project[] = [
     category: "AR",
     client: null,
     year: null,
-    technologies: ["Unity", "Vuforia Engine", "Model Target", "Blender", "Figma"],
+    technologies: [
+      "Unity",
+      "Vuforia Engine",
+      "Model Target",
+      "Blender",
+      "Figma",
+    ],
     shortDescription:
       "An AR-based VMC operator training application that provides step-by-step guidance for machine operation and control tasks.",
     detailedDescription:
@@ -1396,28 +1607,28 @@ export const projects: Project[] = [
       {
         label: "Select Training Module",
         description:
-          "The user opens the application and selects the VMC operation they want to learn."
+          "The user opens the application and selects the VMC operation they want to learn.",
       },
       {
         label: "Recognize VMC",
         description:
-          "The user points the device camera toward the VMC and the Vuforia Model Target recognizes the machine."
+          "The user points the device camera toward the VMC and the Vuforia Model Target recognizes the machine.",
       },
       {
         label: "Augment Training Content",
         description:
-          "Virtual instructional content appears spatially aligned with the physical VMC."
+          "Virtual instructional content appears spatially aligned with the physical VMC.",
       },
       {
         label: "Step-by-Step Guidance",
         description:
-          "The application guides the user through the selected machine operation using sequential visual instructions."
+          "The application guides the user through the selected machine operation using sequential visual instructions.",
       },
       {
         label: "Execute the Task",
         description:
-          "The operator follows the guidance and performs the required control operation on the physical VMC."
-      }
+          "The operator follows the guidance and performs the required control operation on the physical VMC.",
+      },
     ],
     userJourney: [
       "Launch the VMC AR training application.",
@@ -1427,7 +1638,7 @@ export const projects: Project[] = [
       "View the augmented training content.",
       "Follow the step-by-step instructions.",
       "Perform the required VMC control operation.",
-      "Complete the selected training task."
+      "Complete the selected training task.",
     ],
     features: [
       "AR-based VMC operator training",
@@ -1439,33 +1650,32 @@ export const projects: Project[] = [
       "Spindle control training",
       "Coolant control training",
       "Tool change control training",
-      "Tool offset training"
+      "Tool offset training",
     ],
-    role:
-      "XR Developer responsible for developing the AR-based VMC training experience, implementing Model Target tracking, creating the module-based training workflow, and developing step-by-step machine operation guidance.",
+    role: "XR Developer responsible for developing the AR-based VMC training experience, implementing Model Target tracking, creating the module-based training workflow, and developing step-by-step machine operation guidance.",
     contribution:
       "Developed the VMC AR training application in Unity using Vuforia Model Target tracking. Implemented the VMC recognition workflow, module selection, augmented instructional content, and step-by-step guidance for spindle control, coolant control, tool change control, and tool offset operations.",
     challenges: [
       "Accurately recognizing the physical VMC and maintaining alignment of virtual instructional content.",
       "Converting machine operating procedures into clear and sequential AR instructions.",
       "Presenting guidance without obstructing the operator's view of the physical machine.",
-      "Structuring multiple VMC operations into independent training modules."
+      "Structuring multiple VMC operations into independent training modules.",
     ],
     solutions: [
       "Used Vuforia Model Target to recognize the physical VMC and anchor the training experience.",
       "Structured the application into task-specific training modules.",
       "Implemented sequential AR guidance to explain each machine operation.",
-      "Presented contextual virtual instructions around the relevant physical controls."
+      "Presented contextual virtual instructions around the relevant physical controls.",
     ],
     results: [
       "Created an AR-based training environment for VMC operators.",
       "Enabled users to select and learn individual VMC control operations.",
       "Provided step-by-step guidance directly over the physical VMC.",
-      "Covered spindle control, coolant control, tool change control, and tool offset training."
+      "Covered spindle control, coolant control, tool change control, and tool offset training.",
     ],
     video: {
       provider: "google-drive",
-      url: "https://drive.google.com/file/d/1lyGE7x8nyw0KO4j_QeMRoTqTygkHBCqJ/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1lyGE7x8nyw0KO4j_QeMRoTqTygkHBCqJ/view?usp=sharing",
     },
     gallery: [
       {
@@ -1505,7 +1715,7 @@ export const projects: Project[] = [
         caption: "Practicals menu, alternate view",
       },
     ],
-    status: "seeded"
+    status: "seeded",
   },
   {
     slug: "amr-cad-gazebo-simulation",
@@ -1514,7 +1724,14 @@ export const projects: Project[] = [
     category: "Mechanical",
     client: "UN World Food Programme",
     year: "2024–2025",
-    technologies: ["Fusion 360", "Blender", "CAD Modelling", "Gazebo", "Robot Simulation", "Sensors"],
+    technologies: [
+      "Fusion 360",
+      "Blender",
+      "CAD Modelling",
+      "Gazebo",
+      "Robot Simulation",
+      "Sensors",
+    ],
     shortDescription:
       "Mechanical design and CAD modelling of an Autonomous Mobile Robot and its warehouse environment, optimized for Gazebo-based navigation simulation and testing.",
     detailedDescription:
@@ -1526,28 +1743,34 @@ export const projects: Project[] = [
     flow: [
       {
         label: "Mechanical Design",
-        description: "Designed the complete AMR system from a mechanical design standpoint, covering its structure and core components."
+        description:
+          "Designed the complete AMR system from a mechanical design standpoint, covering its structure and core components.",
       },
       {
         label: "Detailed CAD Modelling",
-        description: "Built detailed CAD models of the AMR's mechanical structure and components."
+        description:
+          "Built detailed CAD models of the AMR's mechanical structure and components.",
       },
       {
         label: "Simulation-Optimized CAD",
-        description: "Developed a separate, optimized CAD version of the AMR tuned for simulation accuracy and computational efficiency."
+        description:
+          "Developed a separate, optimized CAD version of the AMR tuned for simulation accuracy and computational efficiency.",
       },
       {
         label: "Warehouse Environment Design",
-        description: "Designed and prepared the warehouse environment required for AMR simulation."
+        description:
+          "Designed and prepared the warehouse environment required for AMR simulation.",
       },
       {
         label: "Gazebo Integration",
-        description: "Optimized the AMR and warehouse models for Gazebo-based testing, debugging, and simulation."
+        description:
+          "Optimized the AMR and warehouse models for Gazebo-based testing, debugging, and simulation.",
       },
       {
         label: "CAD-to-Simulation Workflow",
-        description: "Refined the CAD-to-simulation workflow so the mechanical models could be used effectively for navigation and system testing."
-      }
+        description:
+          "Refined the CAD-to-simulation workflow so the mechanical models could be used effectively for navigation and system testing.",
+      },
     ],
     userJourney: [],
     features: [
@@ -1555,26 +1778,25 @@ export const projects: Project[] = [
       "Simulation-optimized CAD variant for computational efficiency",
       "Custom-built warehouse environment model for simulation",
       "Gazebo-integrated AMR and warehouse for navigation testing",
-      "CAD-to-simulation workflow supporting iterative testing and debugging"
+      "CAD-to-simulation workflow supporting iterative testing and debugging",
     ],
-    role:
-      "Mechanical Design & CAD Engineer responsible for the complete CAD modelling of the AMR and its simulation environment, and for preparing the mechanical models for Gazebo-based testing.",
+    role: "Mechanical Design & CAD Engineer responsible for the complete CAD modelling of the AMR and its simulation environment, and for preparing the mechanical models for Gazebo-based testing.",
     contribution:
       "Designed and developed the complete AMR system using mechanical design and CAD modelling in Fusion 360 and Blender. Created detailed CAD models of the robot's structure and components, then built a separate, simulation-optimized CAD version for computational efficiency. Designed and prepared the warehouse environment required for simulation, and optimized both the AMR and warehouse models for Gazebo-based testing, debugging, and simulation, establishing a CAD-to-simulation workflow for navigation and system testing.",
     challenges: [
       "Balancing CAD geometry fidelity with the computational efficiency needed for real-time Gazebo simulation.",
       "Building a warehouse environment detailed enough to be a meaningful navigation testbed without overloading the simulation.",
-      "Maintaining a reliable CAD-to-simulation workflow so mechanical design changes stayed compatible with the simulation models."
+      "Maintaining a reliable CAD-to-simulation workflow so mechanical design changes stayed compatible with the simulation models.",
     ],
     solutions: [
       "Developed a dedicated, simulation-optimized CAD version of the AMR separate from the full-detail design model.",
       "Modelled a purpose-built warehouse environment scoped specifically for AMR navigation simulation.",
-      "Structured a CAD-to-simulation workflow to keep the mechanical models usable for navigation and system testing in Gazebo."
+      "Structured a CAD-to-simulation workflow to keep the mechanical models usable for navigation and system testing in Gazebo.",
     ],
     results: [
       "Produced a complete mechanical CAD model of the AMR system.",
       "Delivered a simulation-ready CAD version optimized for Gazebo.",
-      "Built a warehouse environment model to support AMR navigation testing and debugging."
+      "Built a warehouse environment model to support AMR navigation testing and debugging.",
     ],
     video: { provider: "none" },
     gallery: [
@@ -1585,7 +1807,7 @@ export const projects: Project[] = [
         caption: "All files screenshot",
       },
     ],
-    status: "seeded"
+    status: "seeded",
   },
 ];
 
