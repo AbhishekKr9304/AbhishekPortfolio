@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project";
+import { assemblyLineVrPrivacyPolicy } from "@/data/privacyPolicies";
 
 const CONTENT_NEEDED = "[CONTENT NEEDED]";
 
@@ -22,9 +23,6 @@ export const projects: Project[] = [
       "Meta Quest",
       "Meta XR All-in-One SDK",
       "XR Interaction",
-      "VR Interaction",
-      "Web Application",
-      "REST API",
       "Figma",
     ],
 
@@ -201,6 +199,29 @@ export const projects: Project[] = [
       url: "https://drive.google.com/file/d/1W8gWQSA2msP_javTCAKIAnkD-XcqeL8T/view?usp=drive_link",
       title: "Dell Electronics Manufacturing VR Training",
     },
+    videos: [
+      {
+        provider: "google-drive",
+        url: "https://drive.google.com/file/d/1E4HQNU4mUVNaL553k9X74uhTANkHKrLU/view?usp=sharing",
+        title: "Soldering",
+        caption:
+          "Soldering fundamentals and the correct practices for working with electronic components and manufacturing equipment.",
+      },
+      {
+        provider: "google-drive",
+        url: "https://drive.google.com/file/d/1zNrKVPsZ_KnP0fjryl2lEYMOYD3cm1TT/view?usp=sharing",
+        title: "Electronics Fundamentals",
+        caption:
+          "Introduces the fundamentals of electricity and electronics used in electronics manufacturing.",
+      },
+      {
+        provider: "google-drive",
+        url: "https://drive.google.com/file/d/1a86bciYsaMjOI9AWujPxwE_q7GOoyRli/view?usp=sharing",
+        title: "Component Identification",
+        caption:
+          "Hands-on identification of commonly used electronic components in the virtual workstation.",
+      },
+    ],
 
     gallery: [],
 
@@ -1715,6 +1736,168 @@ export const projects: Project[] = [
         caption: "Practicals menu, alternate view",
       },
     ],
+    status: "seeded",
+  },
+  
+  {
+    slug: "assembly-line-vr",
+
+    title: "Assembly Line VR",
+
+    discipline: "XR",
+
+    category: "VR",
+
+    client: "Industrial Manufacturing",
+
+    year: "2026",
+
+    technologies: [
+      "Unity",
+      "C#",
+      "Meta Quest",
+      "Meta XR All-in-One SDK",
+      "VR Interaction",
+    ],
+
+    shortDescription:
+      "An immersive VR-based industrial assembly line training application that guides trainees through assembly procedures using interactive instructions, virtual components, and step-by-step task guidance.",
+
+    detailedDescription:
+      "Assembly Line VR Training is an immersive virtual reality application developed to provide structured, interactive training for industrial assembly operations. The experience begins with an introductory message that explains the training activity. Users then move to a highlighted area within the virtual environment to initiate the training session. Once training begins, the application guides users through the assembly procedure step by step, providing instructions and interactive tasks to help them perform the required operations in the correct sequence. Upon completing the training, users can choose to reset the experience and repeat the training or quit the application. The solution provides a repeatable virtual training environment for learning industrial assembly procedures using the Meta Quest platform.",
+
+    objective:
+      "To develop an immersive VR training application that guides users through industrial assembly procedures in a structured sequence. The application aims to improve procedural understanding through interactive task execution, clear instructions, and repeatable training sessions in a virtual manufacturing environment.",
+
+    problem:
+      "Traditional industrial assembly training often requires physical workstations, tools, components, and trainer supervision. Repeated demonstrations can consume resources and limit opportunities for trainees to practice at their own pace. The project addresses these challenges by providing a virtual assembly environment where users can follow guided instructions, interact with virtual tools and components, and repeat the training process without repeatedly occupying a physical workstation.",
+
+    flow: [
+      {
+        label: "Introduction Message",
+        description:
+          "Displays an introductory message explaining the training experience and preparing the user to begin.",
+      },
+      {
+        label: "Training Start Zone",
+        description:
+          "Highlights a designated area within the virtual environment. The user stands in the highlighted area to initiate the training session.",
+      },
+      {
+        label: "Step-by-Step Guided Training",
+        description:
+          "Guides the user through the assembly procedure in a predefined sequence using instructions, interactive objects, and task-specific guidance.",
+      },
+      {
+        label: "Training Completion",
+        description:
+          "Displays a completion message after the user finishes the required training steps.",
+      },
+      {
+        label: "Reset or Quit",
+        description:
+          "Allows the user to reset the training experience and repeat the procedure or quit the application.",
+      },
+    ],
+
+    userJourney: [
+      "Launch the Assembly Line VR application on a supported Meta Quest headset.",
+      "Read the introductory message displayed at the beginning of the experience.",
+      "Locate the highlighted area in the virtual environment.",
+      "Stand within the highlighted area to begin the training session.",
+      "Follow the step-by-step instructions presented by the application.",
+      "Interact with virtual tools and assembly components as instructed.",
+      "Complete each assembly operation in the required sequence.",
+      "Receive the training completion message after finishing the procedure.",
+      "Choose to reset the experience for another training session or quit the application.",
+    ],
+
+    features: [
+      "Immersive VR assembly line training environment",
+      "Introductory message and training instructions",
+      "Highlighted training start zone",
+      "Position-based training initiation",
+      "Step-by-step guided assembly procedures",
+      "Interactive virtual tools and components",
+      "Sequential task progression",
+      "Contextual instructions during training",
+      "Training completion notification",
+      "Training reset functionality",
+      "Application quit option",
+      "Meta Quest headset support",
+    ],
+
+    role:
+      "XR Developer responsible for designing and developing the VR training experience in Unity, implementing interactive assembly operations, creating step-based training logic, integrating Meta Quest interactions, and developing training initiation, completion, and reset functionality.",
+
+    contribution:
+      "Developed the Assembly Line VR application using Unity and C#. Implemented the introductory message, highlighted training start zone, and position-based training initiation. Developed the step-by-step training workflow, interactive tool and component handling, assembly task progression, and contextual guidance. Implemented training completion messaging and reset functionality, allowing users to repeat the experience or quit the application. Integrated VR interactions using the Meta XR All-in-One SDK and prepared the application for deployment on Meta Quest.",
+
+    challenges: [
+      "Creating an intuitive starting experience for first-time VR users.",
+      "Clearly communicating where and how the user should begin training.",
+      "Implementing reliable training initiation based on the user's position.",
+      "Maintaining the correct sequence of assembly operations.",
+      "Designing intuitive interactions for virtual tools and components.",
+      "Providing clear instructions throughout the training experience.",
+      "Ensuring the training can be reset without requiring a complete application restart.",
+      "Preparing the application for standalone Meta Quest deployment.",
+    ],
+
+    solutions: [
+      "Implemented an introductory message to orient users before training.",
+      "Created a highlighted start zone to direct users to the correct starting position.",
+      "Developed position-based logic to initiate the training when the user enters the designated area.",
+      "Implemented step-based training logic to control the assembly workflow.",
+      "Integrated VR interactions for handling tools and assembly components.",
+      "Added contextual instructions and completion feedback.",
+      "Implemented reset functionality to allow users to repeat the training session.",
+      "Provided a quit option at the end of the experience.",
+    ],
+
+    results: [
+      "Created an immersive VR environment for guided industrial assembly training.",
+      "Established a clear user journey from introduction to training completion.",
+      "Enabled users to initiate training through a highlighted virtual start zone.",
+      "Provided structured, step-by-step guidance for assembly operations.",
+      "Enabled users to reset and repeat the training experience.",
+      "Prepared the application for deployment and review on the Meta Quest platform.",
+    ],
+
+    video: {
+      provider:"google-drive",
+      url: "https://drive.google.com/file/d/1nGTT09_Qj2IKcZ4HPy30wm_IQMI7t2XR/view?usp=sharing",
+      title: "Environment Walkthrough",
+    },
+    
+
+    gallery: [
+      {
+        type: "image",
+        src: "/ProjectsImage/AssemblyLineVRTraining/Environment.png",
+        alt: "Virtual industrial assembly line training environment",
+        caption: "Virtual assembly environment",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/AssemblyLineVRTraining/Introduction.png",
+        alt: "Introductory message displayed at the beginning of the VR training",
+        caption: "Training introduction",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/AssemblyLineVRTraining/StartZone.png",
+        alt: "Highlighted area used to initiate the VR training session",
+        caption: "Training start zone",
+      },
+      {
+        type: "image",
+        src: "/ProjectsImage/AssemblyLineVRTraining/Training.png",
+        alt: "Interactive step-by-step assembly training in virtual reality",
+        caption: "Guided assembly training",
+      },
+    ],
+    privacyPolicy: assemblyLineVrPrivacyPolicy,
     status: "seeded",
   },
   {

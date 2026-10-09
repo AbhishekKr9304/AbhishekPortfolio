@@ -23,6 +23,27 @@ export interface ProjectVideo {
   caption?: string;
 }
 
+/** A paragraph, a bulleted list, or an external link shown on its own line. */
+export type PrivacyPolicyBlock = string | string[] | { label: string; href: string };
+
+export interface PrivacyPolicySection {
+  id: string;
+  title: string;
+  blocks: PrivacyPolicyBlock[];
+}
+
+/** App-specific privacy policy, published at /projects/[slug]/privacy-policy. */
+export interface ProjectPrivacyPolicy {
+  /** Exact name as listed on the store. */
+  appName: string;
+  /** Where the app is distributed, e.g. "Meta Horizon Store". */
+  platform: string;
+  /** ISO date, e.g. "2026-10-09". */
+  lastUpdated: string;
+  summary: string;
+  sections: PrivacyPolicySection[];
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -47,5 +68,7 @@ export interface Project {
   /** Optional additional videos (e.g. one per module). When set, these are shown as a playlist instead of `video`. */
   videos?: ProjectVideo[];
   gallery: ProjectMediaItem[];
+  /** Set for apps published to a store; adds a privacy policy page and a link to it. */
+  privacyPolicy?: ProjectPrivacyPolicy;
   status: ProjectStatus;
 }

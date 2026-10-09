@@ -6,6 +6,7 @@ import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { NextProjectNav } from "@/components/project/NextProjectNav";
 import { CaseStudySection, CaseStudyList } from "@/components/project/CaseStudySection";
 import { ProjectFlow } from "@/components/ui/ProjectFlow";
+import { ButtonLink } from "@/components/ui/Button";
 import { ProjectVisit } from "@/lib/game/GameProvider";
 
 export async function generateStaticParams() {
@@ -85,6 +86,23 @@ export default async function ProjectPage({
       <CaseStudySection title="Media Gallery">
         <ProjectGallery items={project.gallery} />
       </CaseStudySection>
+
+      {project.privacyPolicy && (
+        <CaseStudySection title="Privacy Policy">
+          <p>
+            How {project.privacyPolicy.appName} on the{" "}
+            {project.privacyPolicy.platform} handles, stores, and lets you
+            delete your data.
+          </p>
+          <ButtonLink
+            href={`/projects/${project.slug}/privacy-policy`}
+            variant="secondary"
+            className="mt-6"
+          >
+            View privacy policy <span aria-hidden="true">&rarr;</span>
+          </ButtonLink>
+        </CaseStudySection>
+      )}
 
       <NextProjectNav project={nextProject} />
     </article>

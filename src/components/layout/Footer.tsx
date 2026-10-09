@@ -1,5 +1,4 @@
 import { contactInfo } from "@/data/contact";
-import Link from "next/link";
 
 export function Footer() {
   return (
@@ -7,9 +6,6 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Abhishek Kumar — XR Developer</p>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
-          <Link href="/privacy-policy" className="hover:text-accent">
-            Privacy Policy
-          </Link>
           <a href={`mailto:${contactInfo.email}`} className="hover:text-accent">
             {contactInfo.email}
           </a>
