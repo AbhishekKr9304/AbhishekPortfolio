@@ -1886,13 +1886,13 @@ export const projects: Project[] = [
       },
       {
         type: "image",
-        src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity1.png",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Futuristic Assembly Area Training Hall.png",
         alt: "Highlighted area used to initiate the VR training session",
         caption: "Virtual assembly line environment 3",
       },
       {
         type: "image",
-        src: "/ProjectsImage/LumaxDharuheraVRTraining/Unity1.png",
+        src: "/ProjectsImage/LumaxDharuheraVRTraining/Modern Industrial Assembly Training Hall.png",
         alt: "Virtual assembly line environment - Perspective view",
         caption: "Virtual assembly line environment 4",
       },
